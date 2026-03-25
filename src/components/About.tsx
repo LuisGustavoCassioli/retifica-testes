@@ -61,7 +61,7 @@ export default function About() {
                             <div
                                 className="text-4xl font-black font-heading text-[#111111]"
                             >
-                                15+
+                                8
                             </div>
                             <div className="text-xs tracking-wider uppercase mt-1" style={{ color: 'rgba(0,0,0,0.65)' }}>
                                 Anos de<br />Excelência

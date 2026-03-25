@@ -1,33 +1,38 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { Wrench, CheckCircle2, ChevronRight, Activity, Settings, Package, UserCheck } from 'lucide-react'
+import { Wrench, CheckCircle2, ChevronRight, Tooltip, Layers, Settings, Microscope, Droplets } from 'lucide-react'
 
-const blockHeadServices = [
-    { title: 'Bloco', items: ['Abertura de Cilindro', 'Banho Químico', 'Pintura', 'Lavagem Fina', 'Brunimento'], icon: Wrench },
-    { title: 'Cabeçote', items: ['Banho Químico', 'Plaina', 'Assentamento de Válvulas', 'Troca de Retentores', 'Vedadores'], icon: CheckCircle2 },
-]
-
-const componentRestoration = [
-    { title: 'Bielas', items: ['Retífica do Ferro', 'Alinhamento'], icon: Activity },
-    { title: 'Virabrequim', items: ['Retífica Colo de Biela', 'Retífica Colo de Mancal', 'Banho Químico', 'Alinhamento'], icon: Settings },
+const remanufacturedParts = [
+    {
+        title: 'Bloco',
+        tasks: ['Abertura de cilindro', 'Banho químico', 'Pintura especializada', 'Lavagem fina', 'Brunimento do cilindro'],
+        icon: Layers
+    },
+    {
+        title: 'Cabeçote',
+        tasks: ['Banho químico', 'Plaina de face', 'Assentamento de válvulas', 'Troca de retentores', 'Vedadores novos'],
+        icon: Settings
+    },
+    {
+        title: 'Bielas',
+        tasks: ['Retífica do ferro', 'Alinhamento de precisão'],
+        icon: Wrench
+    },
+    {
+        title: 'Virabrequim',
+        tasks: ['Retífica do colo de biela', 'Retífica do colo de mancal', 'Banho químico', 'Alinhamento mecânico'],
+        icon: Activity
+    }
 ]
 
 const replacedParts = [
-    'Pistões e Anéis',
-    'Bronzinas de Biela',
-    'Bronzinas de Mancal',
-    'Retentores e Vedadores',
-    'Jogo de Juntas Completo',
-    'Filtro de Óleo/Motor',
+    'Pistões', 'Anéis', 'Bronzina de Biela', 'Bronzina de Mancal',
+    'Retentores', 'Vedadores de Válvulas', 'Jogo de Juntas', 'Filtro de Motor'
 ]
 
-const laborServices = [
-    'Desmontagem Técnica',
-    'Montagem de Precisão',
-    'Instalação no Veículo',
-    'Pintura Industrial',
-    'Banho Químico por Ultrassom',
-    'Lavagem Fina Protetiva',
+const laborWorkflow = [
+    'Desmontagem Técnica', 'Montagem Especializada', 'Instalação Recomenda',
+    'Pintura Industrial', 'Banho Químico', 'Lavagem Fina'
 ]
 
 export default function Services() {
@@ -69,98 +74,119 @@ export default function Services() {
                     </p>
                 </motion.div>
 
-                <motion.div
-                    className="max-w-4xl mx-auto mb-16 p-8 relative overflow-hidden"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={inView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.8 }}
-                    style={{ background: 'rgba(207,181,59,0.03)', border: '1px solid rgba(207,181,59,0.1)' }}
-                >
-                    <div className="absolute top-0 left-0 w-2 h-full bg-gold-racing" />
-                    <p className="text-lg md:text-xl font-medium text-[#e0e0e0] leading-relaxed mb-4">
-                        "Após a desmontagem completa, cada peça é rigorosamente medida e conferida com exatidão máxima."
-                    </p>
-                    <div className="flex items-center gap-2 text-gold-racing text-sm font-bold uppercase tracking-widest">
-                        <Activity size={16} />
-                        Metrologia com Súbitos, Micrômetros e Paquímetros de Alta Precisão
-                    </div>
-                </motion.div>
+                {/* Meta Header */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                    <motion.div
+                        className="p-8 relative overflow-hidden"
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={inView ? { opacity: 1, x: 0 } : {}}
+                        transition={{ duration: 0.8 }}
+                        style={{ background: 'rgba(207,181,59,0.03)', border: '1px solid rgba(207,181,59,0.1)' }}
+                    >
+                        <Microscope size={32} className="text-gold-racing mb-4 opacity-50" />
+                        <h3 className="text-lg font-bold uppercase tracking-widest text-[#e0e0e0] mb-3">Metrologia Avançada</h3>
+                        <p className="text-sm text-[#9b9b9b] leading-relaxed">
+                            Equipamentos de alta qualidade (Súbitos, Micrômetros, Paquímetros precisos) para garantir tolerâncias nominais de fábrica.
+                        </p>
+                    </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {/* 1. Core Machining */}
-                    <div className="space-y-8">
-                        <h3 className="text-sm font-black uppercase tracking-[0.2em] text-gold-racing border-b border-gold-racing/20 pb-2">Retífica de Base</h3>
-                        {blockHeadServices.map((group) => (
-                            <motion.div key={group.title} className="space-y-4" initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}}>
-                                <div className="flex items-center gap-2 text-white font-bold uppercase text-xs">
-                                    <group.icon size={14} className="text-gold-racing" />
-                                    {group.title}
-                                </div>
-                                <ul className="space-y-2">
-                                    {group.items.map((item, i) => (
-                                        <li key={i} className="flex items-center gap-2 text-[11px] text-[#9b9b9b] uppercase tracking-tighter">
-                                            <ChevronRight size={10} className="text-gold-racing/50" />
-                                            {item}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </motion.div>
-                        ))}
-                    </div>
+                    <motion.div
+                        className="p-8 relative overflow-hidden"
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={inView ? { opacity: 1, x: 0 } : {}}
+                        transition={{ duration: 0.8, delay: 0.1 }}
+                        style={{ background: 'rgba(207,181,59,0.03)', border: '1px solid rgba(207,181,59,0.1)' }}
+                    >
+                        <Droplets size={32} className="text-gold-racing mb-4 opacity-50" />
+                        <h3 className="text-lg font-bold uppercase tracking-widest text-[#e0e0e0] mb-3">O Processo</h3>
+                        <p className="text-sm text-[#e0e0e0] leading-relaxed italic">
+                            "Após a desmontagem completa do motor, cada peça é medida e conferida com exatidão máxima antes de qualquer procedimento técnico."
+                        </p>
+                    </motion.div>
+                </div>
 
-                    {/* 2. Component Restoration */}
-                    <div className="space-y-8">
-                        <h3 className="text-sm font-black uppercase tracking-[0.2em] text-gold-racing border-b border-gold-racing/20 pb-2">Componentes</h3>
-                        {componentRestoration.map((group) => (
-                            <motion.div key={group.title} className="space-y-4" initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}}>
-                                <div className="flex items-center gap-2 text-white font-bold uppercase text-xs">
-                                    <group.icon size={14} className="text-gold-racing" />
-                                    {group.title}
-                                </div>
-                                <ul className="space-y-2">
-                                    {group.items.map((item, i) => (
-                                        <li key={i} className="flex items-center gap-2 text-[11px] text-[#9b9b9b] uppercase tracking-tighter">
-                                            <ChevronRight size={10} className="text-gold-racing/50" />
-                                            {item}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </motion.div>
-                        ))}
-                    </div>
+                {/* Technical Grid */}
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
 
-                    {/* 3. Replaced Parts */}
-                    <div className="space-y-6">
-                        <h3 className="text-sm font-black uppercase tracking-[0.2em] text-gold-racing border-b border-gold-racing/20 pb-2">Peças Novas</h3>
-                        <div className="flex items-center gap-2 text-white font-bold uppercase text-xs mb-4">
-                            <Package size={14} className="text-gold-racing" />
-                            Substituição Total
+                    {/* Column 1: Remanufactured */}
+                    <div className="lg:col-span-2 space-y-10">
+                        <div className="flex items-center gap-4 border-b border-white/5 pb-4">
+                            <h3 className="text-2xl font-black uppercase font-heading text-white tracking-widest">
+                                Peças Retificadas
+                            </h3>
                         </div>
-                        <ul className="space-y-3">
-                            {replacedParts.map((item, i) => (
-                                <li key={i} className="flex items-center gap-2 text-[11px] text-[#9b9b9b] uppercase tracking-tighter">
-                                    <CheckCircle2 size={10} className="text-green-500/50" />
-                                    {item}
-                                </li>
-                            ))}
-                        </ul>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            {remanufacturedParts.map((group, i) => {
+                                const Icon = group.icon
+                                return (
+                                    <motion.div
+                                        key={group.title}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={inView ? { opacity: 1, y: 0 } : {}}
+                                        transition={{ duration: 0.6, delay: 0.2 + (i * 0.1) }}
+                                        className="space-y-4"
+                                    >
+                                        <div className="flex items-center gap-3">
+                                            <Icon size={20} className="text-gold-racing opacity-70" />
+                                            <h4 className="text-base font-bold uppercase tracking-wider text-[#e0e0e0]">{group.title}</h4>
+                                        </div>
+                                        <ul className="space-y-2">
+                                            {group.tasks.map((task, tj) => (
+                                                <li key={tj} className="flex items-start gap-3 text-xs text-[#9b9b9b] uppercase tracking-tighter">
+                                                    <span className="w-1 h-3 mt-0.5 bg-gold-racing/30 flex-shrink-0" />
+                                                    {task}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </motion.div>
+                                )
+                            })}
+                        </div>
                     </div>
 
-                    {/* 4. Labor */}
-                    <div className="space-y-6">
-                        <h3 className="text-sm font-black uppercase tracking-[0.2em] text-gold-racing border-b border-gold-racing/20 pb-2">Mão de Obra</h3>
-                        <div className="flex items-center gap-2 text-white font-bold uppercase text-xs mb-4">
-                            <UserCheck size={14} className="text-gold-racing" />
-                            Execução Técnica
-                        </div>
-                        <ul className="space-y-3">
-                            {laborServices.map((item, i) => (
-                                <li key={i} className="flex items-center gap-2 text-[11px] text-[#9b9b9b] uppercase tracking-tighter">
-                                    <ChevronRight size={10} className="text-gold-racing/50" />
-                                    {item}
-                                </li>
-                            ))}
-                        </ul>
+                    {/* Column 2: Replaced & Labor */}
+                    <div className="space-y-12">
+                        {/* Replaced Parts */}
+                        <motion.div
+                            initial={{ opacity: 0, x: 20 }}
+                            animate={inView ? { opacity: 1, x: 0 } : {}}
+                            transition={{ duration: 0.7, delay: 0.4 }}
+                            className="p-6 border border-white/5 bg-linear-to-b from-white/2 to-transparent"
+                        >
+                            <h3 className="text-lg font-black uppercase font-heading text-white tracking-widest mb-6 border-b border-gold-racing/20 pb-2">
+                                Peças Trocadas (Kit)
+                            </h3>
+                            <ul className="space-y-3">
+                                {replacedParts.map((part, i) => (
+                                    <li key={i} className="flex items-center gap-2 text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#9b9b9b]">
+                                        <CheckCircle2 size={12} className="text-gold-racing/60" />
+                                        {part}
+                                    </li>
+                                ))}
+                            </ul>
+                        </motion.div>
+
+                        {/* Labor */}
+                        <motion.div
+                            initial={{ opacity: 0, x: 20 }}
+                            animate={inView ? { opacity: 1, x: 0 } : {}}
+                            transition={{ duration: 0.7, delay: 0.5 }}
+                            className="p-6 border border-white/5 bg-linear-to-b from-white/2 to-transparent"
+                        >
+                            <h3 className="text-lg font-black uppercase font-heading text-white tracking-widest mb-6 border-b border-gold-racing/20 pb-2">
+                                Mão de Obra
+                            </h3>
+                            <ul className="space-y-2">
+                                {laborWorkflow.map((item, i) => (
+                                    <li key={i} className="flex items-center justify-between text-[10px] uppercase tracking-widest text-[#9b9b9b]">
+                                        <span>{item}</span>
+                                        <div className="h-px flex-1 mx-3 bg-white/5" />
+                                        <span className="text-gold-racing font-bold">STND</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </motion.div>
                     </div>
                 </div>
 
@@ -169,11 +195,11 @@ export default function Services() {
                     className="mt-20 text-center"
                     initial={{ opacity: 0 }}
                     animate={inView ? { opacity: 1 } : {}}
-                    transition={{ duration: 0.8, delay: 0.5 }}
+                    transition={{ duration: 0.8, delay: 0.6 }}
                 >
-                    <div className="inline-block px-10 py-5 border border-gold-racing/20 bg-linear-to-b from-transparent to-gold-racing/5">
-                        <span className="text-lg md:text-xl font-bold uppercase tracking-[0.2em] font-heading text-gold-racing">
-                            Recuperação, Usinagem e Retífica em Geral
+                    <div className="inline-block px-10 py-5 border border-gold-racing/20 bg-radial from-gold-racing/5 to-transparent">
+                        <span className="text-lg md:text-xl font-bold uppercase tracking-[0.3em] font-heading text-gold-racing">
+                            Recuperações, Usinagem e Retífica em Geral
                         </span>
                     </div>
                 </motion.div>

@@ -1,28 +1,33 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { Wrench, CheckCircle2, ChevronRight } from 'lucide-react'
+import { Wrench, CheckCircle2, ChevronRight, Activity, Settings, Package, UserCheck } from 'lucide-react'
 
-const blockServices = [
-    'Encamisamento',
-    'Brunimento',
-    'Abertura de cilindro',
-    'Retífica de virabrequim',
-    'Troca de retentores',
-    'Teste de pressão de óleo',
-    'Teste de compressão',
+const blockHeadServices = [
+    { title: 'Bloco', items: ['Abertura de Cilindro', 'Banho Químico', 'Pintura', 'Lavagem Fina', 'Brunimento'], icon: Wrench },
+    { title: 'Cabeçote', items: ['Banho Químico', 'Plaina', 'Assentamento de Válvulas', 'Troca de Retentores', 'Vedadores'], icon: CheckCircle2 },
 ]
 
-const headServices = [
-    'Assentamento de válvulas',
-    'Troca de vedadores',
-    'Montagem',
-    'Soldas de correção',
-    'Enchimento de base',
-    'Tratamento de sedes',
-    'Troca de sedes (caso necessário)',
-    'Mandrilhamento',
-    'Teste de vácuo',
-    'Teste de estanquidade',
+const componentRestoration = [
+    { title: 'Bielas', items: ['Retífica do Ferro', 'Alinhamento'], icon: Activity },
+    { title: 'Virabrequim', items: ['Retífica Colo de Biela', 'Retífica Colo de Mancal', 'Banho Químico', 'Alinhamento'], icon: Settings },
+]
+
+const replacedParts = [
+    'Pistões e Anéis',
+    'Bronzinas de Biela',
+    'Bronzinas de Mancal',
+    'Retentores e Vedadores',
+    'Jogo de Juntas Completo',
+    'Filtro de Óleo/Motor',
+]
+
+const laborServices = [
+    'Desmontagem Técnica',
+    'Montagem de Precisão',
+    'Instalação no Veículo',
+    'Pintura Industrial',
+    'Banho Químico por Ultrassom',
+    'Lavagem Fina Protetiva',
 ]
 
 export default function Services() {
@@ -72,61 +77,91 @@ export default function Services() {
                     style={{ background: 'rgba(207,181,59,0.03)', border: '1px solid rgba(207,181,59,0.1)' }}
                 >
                     <div className="absolute top-0 left-0 w-2 h-full bg-gold-racing" />
-                    <p className="text-lg md:text-xl font-medium text-[#e0e0e0] leading-relaxed italic">
-                        "Após a desmontagem completa do motor, cada componente é rigorosamente medido e conferido com exatidão máxima para garantir o padrão Blessed."
+                    <p className="text-lg md:text-xl font-medium text-[#e0e0e0] leading-relaxed mb-4">
+                        "Após a desmontagem completa, cada peça é rigorosamente medida e conferida com exatidão máxima."
                     </p>
+                    <div className="flex items-center gap-2 text-gold-racing text-sm font-bold uppercase tracking-widest">
+                        <Activity size={16} />
+                        Metrologia com Súbitos, Micrômetros e Paquímetros de Alta Precisão
+                    </div>
                 </motion.div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    {/* Block Services */}
-                    <motion.div
-                        initial={{ opacity: 0, x: -30 }}
-                        animate={inView ? { opacity: 1, x: 0 } : {}}
-                        transition={{ duration: 0.7, delay: 0.2 }}
-                        className="space-y-8"
-                    >
-                        <div className="flex items-center gap-4 border-b border-white/5 pb-4">
-                            <div className="w-12 h-12 flex items-center justify-center bg-gold-racing/10 border border-gold-racing/30">
-                                <Wrench size={24} className="text-gold-racing" />
-                            </div>
-                            <h3 className="text-2xl font-black uppercase font-heading text-white tracking-widest">
-                                Serviços no Bloco
-                            </h3>
-                        </div>
-                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            {blockServices.map((service, i) => (
-                                <li key={i} className="flex items-center gap-3 text-[#9b9b9b] hover:text-white transition-colors group">
-                                    <ChevronRight size={14} className="text-gold-racing group-hover:translate-x-1 transition-transform" />
-                                    <span className="text-sm font-medium uppercase tracking-tight">{service}</span>
-                                </li>
-                            ))}
-                        </ul>
-                    </motion.div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {/* 1. Core Machining */}
+                    <div className="space-y-8">
+                        <h3 className="text-sm font-black uppercase tracking-[0.2em] text-gold-racing border-b border-gold-racing/20 pb-2">Retífica de Base</h3>
+                        {blockHeadServices.map((group) => (
+                            <motion.div key={group.title} className="space-y-4" initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}}>
+                                <div className="flex items-center gap-2 text-white font-bold uppercase text-xs">
+                                    <group.icon size={14} className="text-gold-racing" />
+                                    {group.title}
+                                </div>
+                                <ul className="space-y-2">
+                                    {group.items.map((item, i) => (
+                                        <li key={i} className="flex items-center gap-2 text-[11px] text-[#9b9b9b] uppercase tracking-tighter">
+                                            <ChevronRight size={10} className="text-gold-racing/50" />
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </motion.div>
+                        ))}
+                    </div>
 
-                    {/* Head Services */}
-                    <motion.div
-                        initial={{ opacity: 0, x: 30 }}
-                        animate={inView ? { opacity: 1, x: 0 } : {}}
-                        transition={{ duration: 0.7, delay: 0.3 }}
-                        className="space-y-8"
-                    >
-                        <div className="flex items-center gap-4 border-b border-white/5 pb-4 text-right lg:flex-row-reverse lg:text-left">
-                            <div className="w-12 h-12 flex items-center justify-center bg-gold-racing/10 border border-gold-racing/30">
-                                <CheckCircle2 size={24} className="text-gold-racing" />
-                            </div>
-                            <h3 className="text-2xl font-black uppercase font-heading text-white tracking-widest">
-                                Serviços no Cabeçote
-                            </h3>
+                    {/* 2. Component Restoration */}
+                    <div className="space-y-8">
+                        <h3 className="text-sm font-black uppercase tracking-[0.2em] text-gold-racing border-b border-gold-racing/20 pb-2">Componentes</h3>
+                        {componentRestoration.map((group) => (
+                            <motion.div key={group.title} className="space-y-4" initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}}>
+                                <div className="flex items-center gap-2 text-white font-bold uppercase text-xs">
+                                    <group.icon size={14} className="text-gold-racing" />
+                                    {group.title}
+                                </div>
+                                <ul className="space-y-2">
+                                    {group.items.map((item, i) => (
+                                        <li key={i} className="flex items-center gap-2 text-[11px] text-[#9b9b9b] uppercase tracking-tighter">
+                                            <ChevronRight size={10} className="text-gold-racing/50" />
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </motion.div>
+                        ))}
+                    </div>
+
+                    {/* 3. Replaced Parts */}
+                    <div className="space-y-6">
+                        <h3 className="text-sm font-black uppercase tracking-[0.2em] text-gold-racing border-b border-gold-racing/20 pb-2">Peças Novas</h3>
+                        <div className="flex items-center gap-2 text-white font-bold uppercase text-xs mb-4">
+                            <Package size={14} className="text-gold-racing" />
+                            Substituição Total
                         </div>
-                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            {headServices.map((service, i) => (
-                                <li key={i} className="flex items-center gap-3 text-[#9b9b9b] hover:text-white transition-colors group">
-                                    <ChevronRight size={14} className="text-gold-racing group-hover:translate-x-1 transition-transform" />
-                                    <span className="text-sm font-medium uppercase tracking-tight">{service}</span>
+                        <ul className="space-y-3">
+                            {replacedParts.map((item, i) => (
+                                <li key={i} className="flex items-center gap-2 text-[11px] text-[#9b9b9b] uppercase tracking-tighter">
+                                    <CheckCircle2 size={10} className="text-green-500/50" />
+                                    {item}
                                 </li>
                             ))}
                         </ul>
-                    </motion.div>
+                    </div>
+
+                    {/* 4. Labor */}
+                    <div className="space-y-6">
+                        <h3 className="text-sm font-black uppercase tracking-[0.2em] text-gold-racing border-b border-gold-racing/20 pb-2">Mão de Obra</h3>
+                        <div className="flex items-center gap-2 text-white font-bold uppercase text-xs mb-4">
+                            <UserCheck size={14} className="text-gold-racing" />
+                            Execução Técnica
+                        </div>
+                        <ul className="space-y-3">
+                            {laborServices.map((item, i) => (
+                                <li key={i} className="flex items-center gap-2 text-[11px] text-[#9b9b9b] uppercase tracking-tighter">
+                                    <ChevronRight size={10} className="text-gold-racing/50" />
+                                    {item}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
 
                 {/* Footer statement */}
@@ -138,7 +173,7 @@ export default function Services() {
                 >
                     <div className="inline-block px-10 py-5 border border-gold-racing/20 bg-linear-to-b from-transparent to-gold-racing/5">
                         <span className="text-lg md:text-xl font-bold uppercase tracking-[0.2em] font-heading text-gold-racing">
-                            Recuperações, Usinagem e Retífica em Geral
+                            Recuperação, Usinagem e Retífica em Geral
                         </span>
                     </div>
                 </motion.div>

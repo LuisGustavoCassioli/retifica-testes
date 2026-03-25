@@ -142,7 +142,7 @@ export default function Hero() {
                     transition={{ duration: 0.8, delay: 0.8 }}
                 >
                     {[
-                        { value: '+2000', label: 'Motores Reconstruídos' },
+                        { value: '+800', label: 'Motores Reconstruídos' },
                         { value: '8', label: 'Anos de Experiência' },
                         { value: '100%', label: 'Garantia de Qualidade' },
                     ].map((stat) => (

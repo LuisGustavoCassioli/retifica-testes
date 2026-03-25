@@ -12,8 +12,9 @@ export default function Contact() {
         const form = e.target as HTMLFormElement
         const name = (form.elements.namedItem('name') as HTMLInputElement).value
         const phone = (form.elements.namedItem('phone') as HTMLInputElement).value
+        const vehicle = (form.elements.namedItem('vehicle') as HTMLInputElement).value
         const message = (form.elements.namedItem('message') as HTMLTextAreaElement).value
-        const text = encodeURIComponent(`Olá! Me chamo ${name} (${phone}).\n\n${message}`)
+        const text = encodeURIComponent(`Olá! Me chamo ${name} (${phone}).\nVeículo/Motor: ${vehicle}\n\n${message}`)
         window.open(`https://wa.me/5511996373477?text=${text}`, '_blank')
         setSent(true)
         setTimeout(() => setSent(false), 5000)

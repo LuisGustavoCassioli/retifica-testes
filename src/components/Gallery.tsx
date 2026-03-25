@@ -4,12 +4,12 @@ import { ZoomIn } from 'lucide-react'
 
 // Gallery uses placeholder engine-related images from Unsplash (no API needed)
 const galleryItems = [
-    { id: 1, src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=70&auto=format', label: 'Motor V8 Reconstruído' },
-    { id: 2, src: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=600&q=70&auto=format', label: 'Usinagem de Precisão' },
-    { id: 3, src: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=600&q=70&auto=format', label: 'Diagnóstico Avançado' },
-    { id: 4, src: 'https://images.unsplash.com/photo-1517520287167-4bda64282d51?w=600&q=70&auto=format', label: 'Componentes Premium' },
-    { id: 5, src: 'https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=600&q=70&auto=format', label: 'Motor de Alta Performance' },
-    { id: 6, src: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&q=70&auto=format', label: 'Resultado Final' },
+    { id: 1, src: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=600&q=70&auto=format', label: 'Retífica de Cilindros' },
+    { id: 2, src: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=600&q=70&auto=format', label: 'Medição de Precisão' },
+    { id: 3, src: 'https://images.unsplash.com/photo-1517520287167-4bda64282d51?w=600&q=70&auto=format', label: 'Montagem Técnica' },
+    { id: 4, src: 'https://images.unsplash.com/photo-1610484042851-dd1fd79744e8?w=600&q=70&auto=format', label: 'Usinagem de Cabeçote' },
+    { id: 5, src: 'https://images.unsplash.com/photo-1504222490345-c075b6008014?w=600&q=70&auto=format', label: 'Diagnóstico Eletrônico' },
+    { id: 6, src: 'https://images.unsplash.com/photo-1534063046313-097c21147a46?w=600&q=70&auto=format', label: 'Polimento Técnico' },
 ]
 
 export default function Gallery() {
@@ -46,7 +46,7 @@ export default function Gallery() {
                         Galeria
                     </h2>
                     <p className="mt-4 text-base max-w-xl mx-auto text-[#9b9b9b]">
-                        Conheça alguns dos motores que já passaram pelo nosso processo de reconstrução e preparação.
+                        Conheça nossos processos internos de usinagem, medição e montagem técnica de alta precisão.
                     </p>
                 </motion.div>
 

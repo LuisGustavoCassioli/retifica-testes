@@ -17,19 +17,15 @@ export default function Footer() {
                     <div>
                         <div className="flex items-center gap-3 mb-4">
                             <div
-                                className="w-9 h-9 flex items-center justify-center font-black text-xl"
+                                className="w-9 h-9 flex items-center justify-center font-black text-xl bg-linear-to-br from-gold-racing to-[#9A8420] font-heading text-[#111111]"
                                 style={{
-                                    background: 'linear-gradient(135deg, #CFB53B, #9A8420)',
-                                    fontFamily: "'Rajdhani', 'Impact', sans-serif",
                                     clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
-                                    color: '#111111',
                                 }}
                             >
                                 B
                             </div>
                             <span
-                                className="text-xl font-black tracking-[0.2em] uppercase"
-                                style={{ fontFamily: "'Rajdhani', 'Impact', sans-serif", color: '#e0e0e0' }}
+                                className="text-xl font-black tracking-[0.2em] uppercase font-heading text-[#e0e0e0]"
                             >
                                 LESSED
                             </span>
@@ -41,15 +37,15 @@ export default function Footer() {
                         {/* Social */}
                         <div className="flex gap-3">
                             {[
-                                { icon: Instagram, href: '#' },
-                                { icon: Facebook, href: '#' },
-                                { icon: Youtube, href: '#' },
-                            ].map(({ icon: Icon, href }, i) => (
+                                { icon: Instagram, href: '#', label: 'Instagram' },
+                                { icon: Facebook, href: '#', label: 'Facebook' },
+                                { icon: Youtube, href: '#', label: 'Youtube' },
+                            ].map(({ icon: Icon, href, label }, i) => (
                                 <a
                                     key={i}
                                     href={href}
-                                    className="w-9 h-9 flex items-center justify-center border transition-all duration-300 hover:border-yellow-600 hover:bg-[rgba(207,181,59,0.1)]"
-                                    style={{ borderColor: 'rgba(255,255,255,0.08)', color: '#9b9b9b' }}
+                                    aria-label={label}
+                                    className="w-9 h-9 flex items-center justify-center border transition-all duration-300 hover:border-yellow-600 hover:bg-gold-racing/10 border-white/8 text-[#9b9b9b]"
                                 >
                                     <Icon size={16} />
                                 </a>
@@ -70,14 +66,10 @@ export default function Footer() {
                                 <li key={l.href}>
                                     <a
                                         href={l.href}
-                                        className="text-sm transition-colors duration-200 group flex items-center gap-2"
-                                        style={{ color: '#9b9b9b' }}
-                                        onMouseEnter={(e) => (e.currentTarget.style.color = '#e0e0e0')}
-                                        onMouseLeave={(e) => (e.currentTarget.style.color = '#9b9b9b')}
+                                        className="text-sm transition-colors duration-200 group flex items-center gap-2 text-[#9b9b9b] hover:text-[#e0e0e0]"
                                     >
                                         <span
-                                            className="w-4 h-px transition-all duration-300"
-                                            style={{ background: '#CFB53B' }}
+                                            className="w-4 h-px transition-all duration-300 bg-gold-racing"
                                         />
                                         {l.label}
                                     </a>
@@ -104,13 +96,12 @@ export default function Footer() {
 
                 {/* Bottom bar */}
                 <div
-                    className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs"
-                    style={{ borderTop: '1px solid rgba(255,255,255,0.05)', color: '#9b9b9b' }}
+                    className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs border-t border-white/5 text-[#9b9b9b]"
                 >
                     <span>© {new Date().getFullYear()} Blessed Retífica de Motores. Todos os direitos reservados.</span>
                     <span>
                         Desenvolvido com{' '}
-                        <span style={{ color: '#CFB53B' }}>♥</span>
+                        <span className="text-gold-racing">♥</span>
                         {' '}e precisão
                     </span>
                 </div>

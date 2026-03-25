@@ -58,14 +58,7 @@ export default function Navbar() {
                         <a
                             key={l.href}
                             href={l.href}
-                            className="text-sm tracking-widest uppercase transition-all duration-200 relative group"
-                            style={{ color: '#9b9b9b' }}
-                            onMouseEnter={(e) =>
-                                ((e.currentTarget as HTMLAnchorElement).style.color = '#e0e0e0')
-                            }
-                            onMouseLeave={(e) =>
-                                ((e.currentTarget as HTMLAnchorElement).style.color = '#9b9b9b')
-                            }
+                            className="text-sm tracking-widest uppercase transition-all duration-200 relative group text-[#9b9b9b] hover:text-[#e0e0e0]"
                         >
                             {l.label}
                             <span
@@ -107,8 +100,7 @@ export default function Navbar() {
                         <a
                             key={l.href}
                             href={l.href}
-                            className="text-sm tracking-widest uppercase py-2 border-b"
-                            style={{ color: '#9b9b9b', borderColor: '#1a1a1d' }}
+                            className="text-sm tracking-widest uppercase py-2 border-b text-[#9b9b9b] border-[#1a1a1d]"
                             onClick={() => setOpen(false)}
                         >
                             {l.label}

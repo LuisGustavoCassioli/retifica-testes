@@ -4,12 +4,12 @@ import { ZoomIn } from 'lucide-react'
 
 // Gallery uses placeholder engine-related images from Unsplash (no API needed)
 const galleryItems = [
-    { id: 1, src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80', label: 'Motor V8 Reconstruído' },
-    { id: 2, src: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=600&q=80', label: 'Usinagem de Precisão' },
-    { id: 3, src: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=600&q=80', label: 'Diagnóstico Avançado' },
-    { id: 4, src: 'https://images.unsplash.com/photo-1542736143-29a8432162bc?w=600&q=80', label: 'Componentes Premium' },
-    { id: 5, src: 'https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=600&q=80', label: 'Motor de Alta Performance' },
-    { id: 6, src: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&q=80', label: 'Resultado Final' },
+    { id: 1, src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=75&auto=format', label: 'Motor V8 Reconstruído' },
+    { id: 2, src: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=75&auto=format', label: 'Usinagem de Precisão' },
+    { id: 3, src: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&q=75&auto=format', label: 'Diagnóstico Avançado' },
+    { id: 4, src: 'https://images.unsplash.com/photo-1542736143-29a8432162bc?w=800&q=75&auto=format', label: 'Componentes Premium' },
+    { id: 5, src: 'https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=800&q=75&auto=format', label: 'Motor de Alta Performance' },
+    { id: 6, src: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=75&auto=format', label: 'Resultado Final' },
 ]
 
 export default function Gallery() {
@@ -68,6 +68,7 @@ export default function Gallery() {
                                 alt={item.label}
                                 className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
                                 style={{ filter: 'brightness(0.6) saturate(0.7)' }}
+                                loading="lazy"
                             />
 
                             <motion.div

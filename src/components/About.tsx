@@ -41,6 +41,7 @@ export default function About() {
                                 alt="Oficina Blessed Retífica"
                                 className="w-full h-80 lg:h-[460px] object-cover"
                                 style={{ filter: 'brightness(0.85)' }}
+                                loading="lazy"
                             />
                             {/* Red tint overlay */}
                             <div

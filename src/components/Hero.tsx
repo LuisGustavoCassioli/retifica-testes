@@ -21,6 +21,7 @@ export default function Hero() {
                     alt="Motor de alto desempenho"
                     className="w-full h-full object-cover"
                     style={{ filter: 'brightness(0.25) saturate(0.8)' }}
+                    fetchPriority="high"
                 />
             </motion.div>
 

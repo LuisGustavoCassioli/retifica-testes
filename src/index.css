@@ -30,7 +30,7 @@
   body {
     background-color: #050505;
     color: #e0e0e0;
-    font-family: 'Inter', 'Segoe UI', sans-serif;
+    font-family: var(--font-body);
     overflow-x: hidden;
   }
 

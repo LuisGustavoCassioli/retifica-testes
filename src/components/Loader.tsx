@@ -11,14 +11,12 @@ export default function Loader() {
             {/* Animated ring */}
             <div className="relative flex items-center justify-center w-32 h-32 mb-8">
                 <motion.div
-                    className="absolute inset-0 rounded-full border-2 border-transparent"
-                    style={{ borderTopColor: '#CFB53B', borderRightColor: '#CFB53B' }}
+                    className="absolute inset-0 rounded-full border-2 border-transparent border-t-gold-racing border-r-gold-racing"
                     animate={{ rotate: 360 }}
                     transition={{ duration: 1.2, repeat: Infinity, ease: 'linear' }}
                 />
                 <motion.div
-                    className="absolute inset-2 rounded-full border border-transparent"
-                    style={{ borderBottomColor: '#7A6818', borderLeftColor: '#7A6818' }}
+                    className="absolute inset-2 rounded-full border border-transparent border-b-[#7A6818] border-l-[#7A6818]"
                     animate={{ rotate: -360 }}
                     transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
                 />
@@ -31,11 +29,7 @@ export default function Loader() {
                     transition={{ duration: 0.6, delay: 0.3 }}
                 >
                     <span
-                        className="text-2xl font-black tracking-widest"
-                        style={{
-                            fontFamily: "'Rajdhani', 'Impact', sans-serif",
-                            color: '#CFB53B',
-                        }}
+                        className="text-2xl font-black tracking-widest font-heading text-gold-racing"
                     >
                         B
                     </span>
@@ -50,11 +44,7 @@ export default function Loader() {
                 className="text-center"
             >
                 <h1
-                    className="text-4xl font-black tracking-[0.3em] uppercase mb-2"
-                    style={{
-                        fontFamily: "'Rajdhani', 'Impact', sans-serif",
-                        color: '#e0e0e0',
-                    }}
+                    className="text-4xl font-black tracking-[0.3em] uppercase mb-2 font-heading text-[#e0e0e0]"
                 >
                     LESSED
                 </h1>
@@ -69,11 +59,10 @@ export default function Loader() {
                 style={{ background: '#1a1a1d' }}
             >
                 <motion.div
-                    className="h-full"
-                    style={{ background: 'linear-gradient(90deg, #CFB53B, #DCC84E)' }}
+                    className="h-full bg-linear-to-r from-gold-racing to-gold-bright"
                     initial={{ width: '0%' }}
                     animate={{ width: '100%' }}
-                    transition={{ duration: 2.3, ease: 'easeInOut' }}
+                    transition={{ duration: 1.5, ease: 'easeInOut' }}
                 />
             </motion.div>
         </motion.div>

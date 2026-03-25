@@ -29,10 +29,10 @@ export default function About() {
                             style={{ border: '1px solid rgba(207,181,59,0.15)' }}
                         />
                         <div
-                            className="absolute -top-3 -left-3 w-16 h-16 z-0 border-t-3 border-l-3 border-gold-racing"
+                            className="absolute -top-3 -left-3 w-16 h-16 z-0 border-t-4 border-l-4 border-gold-racing"
                         />
                         <div
-                            className="absolute -bottom-3 -right-3 w-16 h-16 z-0 border-b-3 border-r-3 border-gold-racing"
+                            className="absolute -bottom-3 -right-3 w-16 h-16 z-0 border-b-4 border-r-4 border-gold-racing"
                         />
 
                         <motion.div className="relative z-10 overflow-hidden" style={{ y: imgY }}>
@@ -41,7 +41,6 @@ export default function About() {
                                 alt="Oficina Blessed Retífica"
                                 className="w-full h-80 lg:h-[460px] object-cover"
                                 style={{ filter: 'brightness(0.85)' }}
-                                loading="lazy"
                             />
                             {/* Red tint overlay */}
                             <div

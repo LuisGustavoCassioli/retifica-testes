@@ -4,12 +4,11 @@ import { ZoomIn } from 'lucide-react'
 
 // Gallery uses placeholder engine-related images from Unsplash (no API needed)
 const galleryItems = [
-    { id: 1, src: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=600&q=70&auto=format', label: 'Retífica de Cilindros' },
-    { id: 2, src: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=600&q=70&auto=format', label: 'Medição de Precisão' },
-    { id: 3, src: 'https://images.unsplash.com/photo-1517520287167-4bda64282d51?w=600&q=70&auto=format', label: 'Montagem Técnica' },
-    { id: 4, src: 'https://images.unsplash.com/photo-1610484042851-dd1fd79744e8?w=600&q=70&auto=format', label: 'Usinagem de Cabeçote' },
-    { id: 5, src: 'https://images.unsplash.com/photo-1504222490345-c075b6008014?w=600&q=70&auto=format', label: 'Diagnóstico Eletrônico' },
-    { id: 6, src: 'https://images.unsplash.com/photo-1534063046313-097c21147a46?w=600&q=70&auto=format', label: 'Polimento Técnico' },
+    { id: 1, src: 'https://www.hojemais.com.br/imagem/noticia/1000/1000/1591194190_93438.jpg', label: 'Retífica de Cilindros' },
+    { id: 2, src: 'https://omecanico.com.br/wp-content/uploads/2015/08/11018.jpg', label: 'Medição de Precisão' },
+    { id: 3, src: 'https://blogdafpt.com.br/wp-content/uploads/2019/10/print_montagem_motor.png', label: 'Montagem Técnica' },
+    { id: 4, src: 'https://goosites.com.br/reticar/imgs_dicas/c4aa0-usinagem-cabecote-01.jpg', label: 'Usinagem de Cabeçote' },
+    { id: 5, src: 'https://monobloco.net.br/wp-content/uploads/2024/03/desvendando-os-misterios-o-diagnostico-eletronico-nos-automoveis-modernos.jpg', label: 'Diagnóstico Eletrônico' },
 ]
 
 export default function Gallery() {

@@ -24,7 +24,7 @@ export default function Gallery() {
             className="relative py-28 overflow-hidden"
             style={{ background: '#070707' }}
         >
-            <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(90deg, transparent, #CFB53B 50%, transparent)' }} />
+            <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-gold-racing/50 to-transparent" />
 
             <div className="max-w-7xl mx-auto px-6">
                 <motion.div
@@ -34,19 +34,18 @@ export default function Gallery() {
                     transition={{ duration: 0.7 }}
                 >
                     <div className="flex items-center justify-center gap-3 mb-4">
-                        <div className="h-px w-12" style={{ background: '#CFB53B' }} />
-                        <span className="text-xs tracking-[0.4em] uppercase font-semibold" style={{ color: '#CFB53B' }}>
+                        <div className="h-px w-12 bg-gold-racing" />
+                        <span className="text-xs tracking-[0.4em] uppercase font-semibold text-gold-racing">
                             Nosso trabalho
                         </span>
-                        <div className="h-px w-12" style={{ background: '#CFB53B' }} />
+                        <div className="h-px w-12 bg-gold-racing" />
                     </div>
                     <h2
-                        className="text-4xl md:text-6xl font-black uppercase"
-                        style={{ fontFamily: "'Rajdhani', 'Impact', sans-serif", color: '#e0e0e0', letterSpacing: '0.02em' }}
+                        className="text-4xl md:text-6xl font-black uppercase font-heading text-[#e0e0e0] tracking-wider"
                     >
                         Galeria
                     </h2>
-                    <p className="mt-4 text-base max-w-xl mx-auto" style={{ color: '#9b9b9b' }}>
+                    <p className="mt-4 text-base max-w-xl mx-auto text-[#9b9b9b]">
                         Conheça alguns dos motores que já passaram pelo nosso processo de reconstrução e preparação.
                     </p>
                 </motion.div>
@@ -71,36 +70,29 @@ export default function Gallery() {
                                 style={{ filter: 'brightness(0.6) saturate(0.7)' }}
                             />
 
-                            {/* Hover overlay */}
                             <motion.div
-                                className="absolute inset-0 flex flex-col items-center justify-center"
-                                style={{
-                                    background: 'linear-gradient(to top, rgba(207,181,59,0.6) 0%, rgba(5,5,5,0.3) 100%)',
-                                }}
+                                className="absolute inset-0 flex flex-col items-center justify-center bg-linear-to-t from-gold-racing/60 to-black/30"
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: hovered === item.id ? 1 : 0 }}
                                 transition={{ duration: 0.3 }}
                             >
                                 <ZoomIn size={32} color="white" className="mb-3 opacity-90" />
                                 <span
-                                    className="text-sm font-bold tracking-widest uppercase text-white"
-                                    style={{ fontFamily: "'Rajdhani', 'Impact', sans-serif" }}
+                                    className="text-sm font-bold tracking-widest uppercase text-white font-heading"
                                 >
                                     {item.label}
                                 </span>
                             </motion.div>
 
-                            {/* Bottom border accent */}
                             <div
-                                className="absolute bottom-0 left-0 right-0 h-0.5 transition-all duration-300"
-                                style={{ background: hovered === item.id ? '#CFB53B' : 'transparent' }}
+                                className={`absolute bottom-0 left-0 right-0 h-0.5 transition-all duration-300 ${hovered === item.id ? 'bg-gold-racing' : 'bg-transparent'}`}
                             />
                         </motion.div>
                     ))}
                 </div>
             </div>
 
-            <div className="absolute bottom-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(90deg, transparent, #CFB53B 50%, transparent)' }} />
+            <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-gold-racing/50 to-transparent" />
         </section>
     )
 }

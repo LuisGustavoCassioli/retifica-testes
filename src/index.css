@@ -4,16 +4,16 @@
   --color-black-deep: #050505;
   --color-black-card: #0e0e0e;
   --color-black-light: #161616;
-  --color-red-racing: #CFB53B;
-  --color-red-bright: #DCC84E;
-  --color-red-glow: rgba(207,181,59, 0.35);
+  --color-gold-racing: #CFB53B;
+  --color-gold-bright: #DCC84E;
+  --color-gold-glow: rgba(207,181,59, 0.35);
   --color-metal-dark: #1a1a1d;
   --color-metal-mid: #2a2a2e;
   --color-metal-light: #3d3d42;
   --color-steel: #9b9b9b;
   --color-steel-light: #c8c8c8;
-  --font-family-heading: 'Rajdhani', 'Bebas Neue', 'Impact', sans-serif;
-  --font-family-body: 'Inter', 'Segoe UI', sans-serif;
+  --font-heading: 'Rajdhani', 'Bebas Neue', 'Impact', sans-serif;
+  --font-body: 'Inter', 'Segoe UI', sans-serif;
 }
 
 @layer base {
@@ -41,28 +41,28 @@
     background: #050505;
   }
   ::-webkit-scrollbar-thumb {
-    background: #CFB53B;
+    background: var(--color-gold-racing);
     border-radius: 3px;
   }
 }
 
 @layer utilities {
-  .text-gradient-red {
-    background: linear-gradient(135deg, #DCC84E, #CFB53B);
+  .text-gradient-gold {
+    background: linear-gradient(135deg, var(--color-gold-bright), var(--color-gold-racing));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
-  .glow-red {
+  .glow-gold {
     box-shadow: 0 0 20px rgba(207,181,59, 0.4), 0 0 40px rgba(207,181,59, 0.15);
   }
 
-  .glow-red-intense {
+  .glow-gold-intense {
     box-shadow: 0 0 30px rgba(207,181,59, 0.6), 0 0 60px rgba(207,181,59, 0.25);
   }
 
-  .border-red-glow {
+  .border-gold-glow {
     border: 1px solid rgba(207,181,59, 0.4);
   }
 

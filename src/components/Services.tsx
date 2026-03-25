@@ -45,7 +45,7 @@ export default function Services() {
             style={{ background: '#080808' }}
         >
             {/* Decorative top border */}
-            <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(90deg, transparent, #CFB53B, transparent)' }} />
+            <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-gold-racing to-transparent" />
 
             <div className="max-w-7xl mx-auto px-6">
                 {/* Section header */}
@@ -56,19 +56,18 @@ export default function Services() {
                     transition={{ duration: 0.7 }}
                 >
                     <div className="flex items-center justify-center gap-3 mb-4">
-                        <div className="h-px w-12" style={{ background: '#CFB53B' }} />
-                        <span className="text-xs tracking-[0.4em] uppercase font-semibold" style={{ color: '#CFB53B' }}>
+                        <div className="h-px w-12 bg-gold-racing" />
+                        <span className="text-xs tracking-[0.4em] uppercase font-semibold text-gold-racing">
                             O que fazemos
                         </span>
-                        <div className="h-px w-12" style={{ background: '#CFB53B' }} />
+                        <div className="h-px w-12 bg-gold-racing" />
                     </div>
                     <h2
-                        className="text-4xl md:text-6xl font-black uppercase"
-                        style={{ fontFamily: "'Rajdhani', 'Impact', sans-serif", color: '#e0e0e0', letterSpacing: '0.02em' }}
+                        className="text-4xl md:text-6xl font-black uppercase font-heading text-[#e0e0e0] tracking-wider"
                     >
                         Nossos Serviços
                     </h2>
-                    <p className="mt-4 text-base max-w-xl mx-auto" style={{ color: '#9b9b9b' }}>
+                    <p className="mt-4 text-base max-w-xl mx-auto text-[#9b9b9b]">
                         Soluções completas em engenharia automotiva com tecnologia de última geração e profissionais certificados.
                     </p>
                 </motion.div>
@@ -105,38 +104,27 @@ export default function Services() {
                                 <div className="flex items-start gap-6">
                                     {/* Icon box */}
                                     <div
-                                        className="flex-shrink-0 w-14 h-14 flex items-center justify-center transition-all duration-500"
-                                        style={{
-                                            background: 'linear-gradient(135deg, rgba(207,181,59,0.15), rgba(154,132,32,0.1))',
-                                            border: '1px solid rgba(207,181,59,0.2)',
-                                        }}
+                                        className="flex-shrink-0 w-14 h-14 flex items-center justify-center transition-all duration-500 bg-linear-to-br from-gold-racing/15 to-[#9A8420]/10 border border-gold-racing/20"
                                     >
                                         <Icon
                                             size={26}
-                                            style={{ color: '#CFB53B' }}
-                                            className="transition-all duration-300 group-hover:scale-110"
+                                            className="transition-all duration-300 group-hover:scale-110 text-gold-racing"
                                         />
                                     </div>
 
                                     <div className="flex-1">
                                         <div className="flex items-center gap-3 mb-2">
                                             <h3
-                                                className="text-xl font-bold uppercase tracking-wide"
-                                                style={{ fontFamily: "'Rajdhani', 'Impact', sans-serif", color: '#e0e0e0' }}
+                                                className="text-xl font-bold uppercase tracking-wide font-heading text-[#e0e0e0]"
                                             >
                                                 {s.title}
                                             </h3>
                                         </div>
-                                        <p className="text-sm leading-relaxed mb-4" style={{ color: '#9b9b9b' }}>
+                                        <p className="text-sm leading-relaxed mb-4 text-[#9b9b9b]">
                                             {s.description}
                                         </p>
                                         <span
-                                            className="text-xs font-semibold tracking-widest uppercase px-3 py-1"
-                                            style={{
-                                                background: 'rgba(207,181,59,0.1)',
-                                                color: '#CFB53B',
-                                                borderLeft: '2px solid #CFB53B',
-                                            }}
+                                            className="text-xs font-semibold tracking-widest uppercase px-3 py-1 bg-gold-racing/10 text-gold-racing border-l-2 border-gold-racing"
                                         >
                                             {s.highlight}
                                         </span>

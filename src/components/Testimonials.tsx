@@ -42,12 +42,8 @@ export default function Testimonials() {
                 background: 'linear-gradient(180deg, #050505 0%, #080808 50%, #050505 100%)',
             }}
         >
-            {/* Radial glow */}
             <div
-                className="absolute inset-0 pointer-events-none"
-                style={{
-                    background: 'radial-gradient(ellipse 80% 40% at 50% 50%, rgba(207,181,59,0.04) 0%, transparent 70%)',
-                }}
+                className="absolute inset-0 pointer-events-none bg-radial from-gold-racing/4 to-transparent via-70%"
             />
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -58,15 +54,14 @@ export default function Testimonials() {
                     transition={{ duration: 0.7 }}
                 >
                     <div className="flex items-center justify-center gap-3 mb-4">
-                        <div className="h-px w-12" style={{ background: '#CFB53B' }} />
-                        <span className="text-xs tracking-[0.4em] uppercase font-semibold" style={{ color: '#CFB53B' }}>
+                        <div className="h-px w-12 bg-gold-racing" />
+                        <span className="text-xs tracking-[0.4em] uppercase font-semibold text-gold-racing">
                             Quem confia em nós
                         </span>
-                        <div className="h-px w-12" style={{ background: '#CFB53B' }} />
+                        <div className="h-px w-12 bg-gold-racing" />
                     </div>
                     <h2
-                        className="text-4xl md:text-6xl font-black uppercase"
-                        style={{ fontFamily: "'Rajdhani', 'Impact', sans-serif", color: '#e0e0e0', letterSpacing: '0.02em' }}
+                        className="text-4xl md:text-6xl font-black uppercase font-heading text-[#e0e0e0] tracking-wider"
                     >
                         Depoimentos
                     </h2>
@@ -89,17 +84,15 @@ export default function Testimonials() {
                                 boxShadow: '0 4px 30px rgba(207,181,59,0.08)',
                             }}
                         >
-                            {/* Quote icon */}
                             <Quote
                                 size={36}
-                                className="absolute top-6 right-8 opacity-10 group-hover:opacity-20 transition-opacity duration-300"
-                                style={{ color: '#CFB53B' }}
+                                className="absolute top-6 right-8 opacity-10 group-hover:opacity-20 transition-opacity duration-300 text-gold-racing"
                             />
 
                             {/* Stars */}
                             <div className="flex gap-1 mb-5">
                                 {Array.from({ length: t.rating }).map((_, si) => (
-                                    <span key={si} style={{ color: '#CFB53B', fontSize: '14px' }}>★</span>
+                                    <span key={si} className="text-gold-racing text-sm">★</span>
                                 ))}
                             </div>
 
@@ -111,12 +104,7 @@ export default function Testimonials() {
                             {/* Author */}
                             <div className="flex items-center gap-4">
                                 <div
-                                    className="w-10 h-10 flex items-center justify-center font-black text-sm"
-                                    style={{
-                                        background: 'linear-gradient(135deg, #CFB53B, #9A8420)',
-                                        fontFamily: "'Rajdhani', 'Impact', sans-serif",
-                                        color: '#111111',
-                                    }}
+                                    className="w-10 h-10 flex items-center justify-center font-black text-sm bg-linear-to-br from-gold-racing to-[#9A8420] font-heading text-[#111111]"
                                 >
                                     {t.name.charAt(0)}
                                 </div>
@@ -126,10 +114,8 @@ export default function Testimonials() {
                                 </div>
                             </div>
 
-                            {/* Bottom accent line */}
                             <div
-                                className="absolute bottom-0 left-0 h-0.5 w-0 group-hover:w-full transition-all duration-500"
-                                style={{ background: 'linear-gradient(90deg, #CFB53B, transparent)' }}
+                                className="absolute bottom-0 left-0 h-0.5 w-0 group-hover:w-full transition-all duration-500 bg-linear-to-r from-gold-racing to-transparent"
                             />
                         </motion.div>
                     ))}

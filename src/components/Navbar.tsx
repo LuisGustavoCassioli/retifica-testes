@@ -38,21 +38,15 @@ export default function Navbar() {
                 {/* Logo */}
                 <a href="#" className="flex items-center gap-3 group">
                     <div
-                        className="w-9 h-9 flex items-center justify-center font-black text-xl transition-all duration-300 group-hover:scale-110"
+                        className="w-9 h-9 flex items-center justify-center font-black text-xl transition-all duration-300 group-hover:scale-110 bg-linear-to-br from-gold-racing to-[#9A8420] font-heading"
                         style={{
-                            background: 'linear-gradient(135deg, #CFB53B, #9A8420)',
-                            fontFamily: "'Rajdhani', 'Impact', sans-serif",
                             clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
                         }}
                     >
                         B
                     </div>
                     <span
-                        className="text-xl font-black tracking-[0.2em] uppercase transition-colors duration-300"
-                        style={{
-                            fontFamily: "'Rajdhani', 'Impact', sans-serif",
-                            color: '#e0e0e0',
-                        }}
+                        className="text-xl font-black tracking-[0.2em] uppercase transition-colors duration-300 font-heading text-[#e0e0e0]"
                     >
                         LESSED
                     </span>
@@ -75,17 +69,14 @@ export default function Navbar() {
                         >
                             {l.label}
                             <span
-                                className="absolute -bottom-1 left-0 w-0 h-px transition-all duration-300 group-hover:w-full"
-                                style={{ background: '#CFB53B' }}
+                                className="absolute -bottom-1 left-0 w-0 h-px transition-all duration-300 group-hover:w-full bg-gold-racing"
                             />
                         </a>
                     ))}
                     <a
                         href="#contato"
-                        className="px-5 py-2 text-sm font-bold tracking-widest uppercase transition-all duration-300 hover:scale-105"
+                        className="px-5 py-2 text-sm font-bold tracking-widest uppercase transition-all duration-300 hover:scale-105 bg-linear-to-br from-gold-racing to-[#9A8420] text-[#111111]"
                         style={{
-                            background: 'linear-gradient(135deg, #CFB53B, #9A8420)',
-                            color: '#111111',
                             clipPath: 'polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%)',
                         }}
                     >
@@ -97,6 +88,7 @@ export default function Navbar() {
                 <button
                     className="md:hidden text-white p-2"
                     onClick={() => setOpen(!open)}
+                    aria-label={open ? 'Fechar menu' : 'Abrir menu'}
                 >
                     {open ? <X size={24} /> : <Menu size={24} />}
                 </button>

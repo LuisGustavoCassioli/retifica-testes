@@ -16,6 +16,7 @@ export default function Contact() {
         const text = encodeURIComponent(`Olá! Me chamo ${name} (${phone}).\n\n${message}`)
         window.open(`https://wa.me/5511996373477?text=${text}`, '_blank')
         setSent(true)
+        setTimeout(() => setSent(false), 5000)
         form.reset()
     }
 
@@ -39,12 +40,8 @@ export default function Contact() {
                 background: 'linear-gradient(160deg, #050505 0%, #0a0505 50%, #050505 100%)',
             }}
         >
-            {/* Radial background glow */}
             <div
-                className="absolute inset-0 pointer-events-none"
-                style={{
-                    background: 'radial-gradient(ellipse 70% 50% at 50% 50%, rgba(207,181,59,0.06) 0%, transparent 70%)',
-                }}
+                className="absolute inset-0 pointer-events-none bg-radial from-gold-racing/6 to-transparent via-70%"
             />
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -55,19 +52,18 @@ export default function Contact() {
                     transition={{ duration: 0.7 }}
                 >
                     <div className="flex items-center justify-center gap-3 mb-4">
-                        <div className="h-px w-12" style={{ background: '#CFB53B' }} />
-                        <span className="text-xs tracking-[0.4em] uppercase font-semibold" style={{ color: '#CFB53B' }}>
+                        <div className="h-px w-12 bg-gold-racing" />
+                        <span className="text-xs tracking-[0.4em] uppercase font-semibold text-gold-racing">
                             Fale conosco
                         </span>
-                        <div className="h-px w-12" style={{ background: '#CFB53B' }} />
+                        <div className="h-px w-12 bg-gold-racing" />
                     </div>
                     <h2
-                        className="text-4xl md:text-6xl font-black uppercase"
-                        style={{ fontFamily: "'Rajdhani', 'Impact', sans-serif", color: '#e0e0e0', letterSpacing: '0.02em' }}
+                        className="text-4xl md:text-6xl font-black uppercase font-heading text-[#e0e0e0] tracking-wider"
                     >
                         Solicite seu Orçamento
                     </h2>
-                    <p className="mt-4 text-base max-w-xl mx-auto" style={{ color: '#9b9b9b' }}>
+                    <p className="mt-4 text-base max-w-xl mx-auto text-[#9b9b9b]">
                         Descreva o problema do seu motor. Nossa equipe retorna com diagnóstico e orçamento em até 24 horas.
                     </p>
                 </motion.div>
@@ -135,16 +131,13 @@ export default function Contact() {
 
                             <button
                                 type="submit"
-                                className="group w-full py-4 font-bold text-sm tracking-widest uppercase flex items-center justify-center gap-3 transition-all duration-300 hover:scale-[1.02]"
+                                className="group w-full py-4 font-bold text-sm tracking-widest uppercase flex items-center justify-center gap-3 transition-all duration-300 hover:scale-[1.02] bg-linear-to-br from-gold-racing to-[#9A8420] text-[#111111] shadow-[0_0_30px_rgba(207,181,59,0.35)]"
                                 style={{
-                                    background: 'linear-gradient(135deg, #CFB53B, #9A8420)',
-                                    color: '#111111',
                                     clipPath: 'polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%)',
-                                    boxShadow: '0 0 30px rgba(207,181,59,0.35)',
                                 }}
                             >
                                 <Send size={16} className="transition-transform group-hover:translate-x-1" />
-                                {sent ? 'Mensagem Enviada! ✓' : 'Solicitar Orçamento via WhatsApp'}
+                                {sent ? 'Abrindo WhatsApp...' : 'Solicitar Orçamento via WhatsApp'}
                             </button>
                         </form>
                     </motion.div>
@@ -184,16 +177,12 @@ export default function Contact() {
                                     }}
                                 >
                                     <div
-                                        className="w-10 h-10 flex items-center justify-center flex-shrink-0"
-                                        style={{
-                                            background: 'rgba(207,181,59,0.1)',
-                                            border: '1px solid rgba(207,181,59,0.2)',
-                                        }}
+                                        className="w-10 h-10 flex items-center justify-center flex-shrink-0 bg-gold-racing/10 border border-gold-racing/20"
                                     >
-                                        <Icon size={18} style={{ color: '#CFB53B' }} />
+                                        <Icon size={18} className="text-gold-racing" />
                                     </div>
                                     <div>
-                                        <div className="text-xs tracking-widest uppercase mb-1" style={{ color: '#CFB53B' }}>
+                                        <div className="text-xs tracking-widest uppercase mb-1 text-gold-racing">
                                             {info.title}
                                         </div>
                                         {info.lines.map((l, li) => (
@@ -214,7 +203,7 @@ export default function Contact() {
                                 borderColor: 'rgba(207,181,59,0.2)',
                             }}
                         >
-                            <div className="text-xs tracking-widest uppercase mb-3" style={{ color: '#CFB53B' }}>
+                            <div className="text-xs tracking-widest uppercase mb-3 text-gold-racing">
                                 Horário de Atendimento
                             </div>
                             <div className="space-y-1">

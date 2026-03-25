@@ -64,26 +64,25 @@ export default function Hero() {
                     transition={{ duration: 0.6, delay: 0.1 }}
                     className="flex items-center justify-center gap-3 mb-8"
                 >
-                    <div className="h-px w-16" style={{ background: 'linear-gradient(90deg, transparent, #CFB53B)' }} />
-                    <span className="text-xs tracking-[0.4em] uppercase font-semibold" style={{ color: '#CFB53B' }}>
+                    <div className="h-px w-16 bg-linear-to-r from-transparent to-gold-racing" />
+                    <span className="text-xs tracking-[0.4em] uppercase font-semibold text-gold-racing">
                         Engenharia de Alto Desempenho
                     </span>
-                    <div className="h-px w-16" style={{ background: 'linear-gradient(90deg, #CFB53B, transparent)' }} />
+                    <div className="h-px w-16 bg-linear-to-r from-gold-racing to-transparent" />
                 </motion.div>
 
                 {/* Main headline */}
                 <motion.h1
-                    className="text-5xl md:text-7xl xl:text-8xl font-black uppercase leading-none mb-6"
-                    style={{ fontFamily: "'Rajdhani', 'Impact', sans-serif", letterSpacing: '0.02em' }}
+                    className="text-5xl md:text-7xl xl:text-8xl font-black uppercase leading-none mb-6 font-heading tracking-wider"
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                    <span className="block" style={{ color: '#e0e0e0' }}>POTÊNCIA</span>
-                    <span className="block" style={{ color: '#CFB53B' }}>
+                    <span className="block text-[#e0e0e0]">POTÊNCIA</span>
+                    <span className="block text-gold-racing">
                         RECONSTRUÍDA.
                     </span>
-                    <span className="block" style={{ color: '#e0e0e0' }}>PRECISÃO ABSOLUTA.</span>
+                    <span className="block text-[#e0e0e0]">PRECISÃO ABSOLUTA.</span>
                 </motion.h1>
 
                 {/* Subtitle */}
@@ -107,34 +106,27 @@ export default function Hero() {
                 >
                     <a
                         href="#contato"
-                        className="group relative px-8 py-4 font-bold text-sm tracking-widest uppercase transition-all duration-300 hover:scale-105 overflow-hidden"
+                        className="group relative px-8 py-4 font-bold text-sm tracking-widest uppercase transition-all duration-300 hover:scale-105 overflow-hidden bg-linear-to-br from-gold-racing to-[#9A8420] text-[#111111] shadow-[0_0_30px_rgba(207,181,59,0.4)]"
                         style={{
-                            background: 'linear-gradient(135deg, #CFB53B, #9A8420)',
-                            color: '#111111',
                             clipPath: 'polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%)',
-                            boxShadow: '0 0 30px rgba(207,181,59,0.4)',
                         }}
                     >
                         <span className="relative z-10">Solicitar Orçamento</span>
                         <div
-                            className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                            style={{ background: 'linear-gradient(135deg, #DCC84E, #CFB53B)' }}
+                            className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-linear-to-br from-gold-bright to-gold-racing"
                         />
                     </a>
 
                     <a
                         href="#servicos"
-                        className="group px-8 py-4 font-bold text-sm tracking-widest uppercase transition-all duration-300 hover:scale-105 border relative overflow-hidden"
+                        className="group px-8 py-4 font-bold text-sm tracking-widest uppercase transition-all duration-300 hover:scale-105 border border-gold-racing/50 text-[#e0e0e0] relative overflow-hidden"
                         style={{
-                            borderColor: 'rgba(207,181,59,0.5)',
-                            color: '#e0e0e0',
                             clipPath: 'polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%)',
                         }}
                     >
                         <span className="relative z-10">Ver Serviços</span>
                         <div
-                            className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                            style={{ background: 'rgba(207,181,59,0.08)' }}
+                            className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gold-racing/8"
                         />
                     </a>
                 </motion.div>
@@ -153,15 +145,11 @@ export default function Hero() {
                     ].map((stat) => (
                         <div key={stat.label} className="text-center">
                             <div
-                                className="text-3xl md:text-4xl font-black"
-                                style={{
-                                    fontFamily: "'Rajdhani', 'Impact', sans-serif",
-                                    color: '#CFB53B',
-                                }}
+                                className="text-3xl md:text-4xl font-black font-heading text-gold-racing"
                             >
                                 {stat.value}
                             </div>
-                            <div className="text-xs tracking-widest uppercase mt-1" style={{ color: '#9b9b9b' }}>
+                            <div className="text-xs tracking-widest uppercase mt-1 text-[#9b9b9b]">
                                 {stat.label}
                             </div>
                         </div>
@@ -175,8 +163,8 @@ export default function Hero() {
                 animate={{ y: [0, 8, 0] }}
                 transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
             >
-                <span className="text-xs tracking-widest uppercase" style={{ color: '#9b9b9b' }}>Scroll</span>
-                <ChevronDown size={20} style={{ color: '#CFB53B' }} />
+                <span className="text-xs tracking-widest uppercase text-[#9b9b9b]">Scroll</span>
+                <ChevronDown size={20} className="text-gold-racing" />
             </motion.div>
         </section>
     )

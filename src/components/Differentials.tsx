@@ -40,12 +40,7 @@ export default function Differentials() {
         >
             {/* Background text watermark */}
             <div
-                className="absolute right-0 top-1/2 -translate-y-1/2 text-[200px] font-black uppercase select-none pointer-events-none leading-none"
-                style={{
-                    color: 'rgba(207,181,59,0.025)',
-                    fontFamily: "'Rajdhani', 'Impact', sans-serif",
-                    right: '-2rem',
-                }}
+                className="absolute right-0 top-1/2 -translate-y-1/2 text-[200px] font-black uppercase select-none pointer-events-none leading-none text-gold-racing/3 font-heading -right-8"
             >
                 BLESSED
             </div>
@@ -58,15 +53,14 @@ export default function Differentials() {
                     transition={{ duration: 0.7 }}
                 >
                     <div className="flex items-center justify-center gap-3 mb-4">
-                        <div className="h-px w-12" style={{ background: '#CFB53B' }} />
-                        <span className="text-xs tracking-[0.4em] uppercase font-semibold" style={{ color: '#CFB53B' }}>
+                        <div className="h-px w-12 bg-gold-racing" />
+                        <span className="text-xs tracking-[0.4em] uppercase font-semibold text-gold-racing">
                             Por que escolher
                         </span>
-                        <div className="h-px w-12" style={{ background: '#CFB53B' }} />
+                        <div className="h-px w-12 bg-gold-racing" />
                     </div>
                     <h2
-                        className="text-4xl md:text-6xl font-black uppercase"
-                        style={{ fontFamily: "'Rajdhani', 'Impact', sans-serif", color: '#e0e0e0', letterSpacing: '0.02em' }}
+                        className="text-4xl md:text-6xl font-black uppercase font-heading text-[#e0e0e0] tracking-wider"
                     >
                         Nossos Diferenciais
                     </h2>
@@ -94,24 +88,18 @@ export default function Differentials() {
                             >
                                 {/* Glow dot top */}
                                 <div
-                                    className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                                    style={{ background: 'linear-gradient(180deg, transparent, #CFB53B)' }}
+                                    className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-linear-to-b from-transparent to-gold-racing"
                                 />
 
                                 {/* Icon */}
                                 <div
-                                    className="w-16 h-16 mx-auto mb-6 flex items-center justify-center transition-all duration-500 group-hover:scale-110"
-                                    style={{
-                                        background: 'radial-gradient(circle, rgba(207,181,59,0.12) 0%, transparent 70%)',
-                                        border: '1px solid rgba(207,181,59,0.15)',
-                                    }}
+                                    className="w-16 h-16 mx-auto mb-6 flex items-center justify-center transition-all duration-500 group-hover:scale-110 bg-radial from-gold-racing/12 to-transparent border border-gold-racing/15"
                                 >
-                                    <Icon size={28} style={{ color: '#CFB53B' }} />
+                                    <Icon size={28} className="text-gold-racing" />
                                 </div>
 
                                 <h3
-                                    className="text-lg font-bold uppercase mb-3 tracking-wide"
-                                    style={{ fontFamily: "'Rajdhani', 'Impact', sans-serif", color: '#e0e0e0' }}
+                                    className="text-lg font-bold uppercase mb-3 tracking-wide font-heading text-[#e0e0e0]"
                                 >
                                     {item.title}
                                 </h3>
@@ -121,8 +109,7 @@ export default function Differentials() {
 
                                 {/* Bottom accent */}
                                 <div
-                                    className="absolute bottom-0 left-1/2 -translate-x-1/2 h-px w-0 group-hover:w-1/2 transition-all duration-500"
-                                    style={{ background: '#CFB53B' }}
+                                    className="absolute bottom-0 left-1/2 -translate-x-1/2 h-px w-0 group-hover:w-1/2 transition-all duration-500 bg-gold-racing"
                                 />
                             </motion.div>
                         )

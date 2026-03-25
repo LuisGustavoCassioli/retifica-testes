@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { ZoomIn } from 'lucide-react'
+import { ZoomIn, MessageCircle } from 'lucide-react'
 
 // Gallery uses placeholder engine-related images from Unsplash (no API needed)
 const galleryItems = [
@@ -91,6 +91,24 @@ export default function Gallery() {
                             />
                         </motion.div>
                     ))}
+
+                    {/* CTA Card for symmetry */}
+                    <motion.a
+                        href="#contato"
+                        className="group relative overflow-hidden flex flex-col items-center justify-center text-center p-6 border-2 border-dashed border-gold-racing/30 hover:border-gold-racing/60 transition-all duration-500"
+                        style={{ aspectRatio: '4/3', background: 'rgba(207,181,59,0.03)' }}
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={inView ? { opacity: 1, scale: 1 } : {}}
+                        transition={{ duration: 0.6, delay: 5 * 0.08 }}
+                    >
+                        <div className="absolute inset-0 bg-radial from-gold-racing/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                        <MessageCircle size={40} className="text-gold-racing mb-4 group-hover:scale-110 transition-transform duration-500" />
+                        <h4 className="text-lg font-bold uppercase tracking-wider text-[#e0e0e0] mb-2">Seu Motor Aqui?</h4>
+                        <p className="text-xs text-[#9b9b9b] uppercase tracking-[0.2em]">Fale com um especialista</p>
+                        <div className="mt-6 px-4 py-2 border border-gold-racing text-gold-racing text-[10px] font-bold uppercase tracking-widest group-hover:bg-gold-racing group-hover:text-black transition-all duration-300">
+                            Solicitar Diagnóstico
+                        </div>
+                    </motion.a>
                 </div>
             </div>
 

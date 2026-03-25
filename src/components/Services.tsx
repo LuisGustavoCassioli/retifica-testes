@@ -1,36 +1,28 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { Wrench, Activity, Zap, Shield } from 'lucide-react'
+import { Wrench, CheckCircle2, ChevronRight } from 'lucide-react'
 
-const services = [
-    {
-        icon: Wrench,
-        title: 'Retífica Completa',
-        description:
-            'Desmontagem total, inspeção, usinagem de precisão e remontagem com componentes de qualidade OEM ou superior.',
-        highlight: 'Do bloco ao acabamento',
-    },
-    {
-        icon: Activity,
-        title: 'Diagnóstico Avançado',
-        description:
-            'Análise computadorizada completa com equipamentos de última geração para identificar qualquer falha ou desgaste.',
-        highlight: 'Tecnologia de ponta',
-    },
-    {
-        icon: Zap,
-        title: 'Preparação Performance',
-        description:
-            'Aumento de potência, modificações internas, balanceamento dinâmico e otimização para máximo rendimento.',
-        highlight: 'Potência máxima',
-    },
-    {
-        icon: Shield,
-        title: 'Manutenção Especializada',
-        description:
-            'Revisões preventivas com protocolos rigorosos, substituição certificada de peças e monitoramento contínuo.',
-        highlight: 'Durabilidade garantida',
-    },
+const blockServices = [
+    'Encamisamento',
+    'Brunimento',
+    'Abertura de cilindro',
+    'Retífica de virabrequim',
+    'Troca de retentores',
+    'Teste de pressão de óleo',
+    'Teste de compressão',
+]
+
+const headServices = [
+    'Assentamento de válvulas',
+    'Troca de vedadores',
+    'Montagem',
+    'Soldas de correção',
+    'Enchimento de base',
+    'Tratamento de sedes',
+    'Troca de sedes (caso necessário)',
+    'Mandrilhamento',
+    'Teste de vácuo',
+    'Teste de estanquidade',
 ]
 
 export default function Services() {
@@ -72,68 +64,84 @@ export default function Services() {
                     </p>
                 </motion.div>
 
-                {/* Cards grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {services.map((s, i) => {
-                        const Icon = s.icon
-                        return (
-                            <motion.div
-                                key={s.title}
-                                className="group relative p-8 border cursor-default transition-all duration-500"
-                                style={{
-                                    background: 'linear-gradient(145deg, #0e0e10, #111113)',
-                                    borderColor: 'rgba(255,255,255,0.06)',
-                                }}
-                                initial={{ opacity: 0, y: 40 }}
-                                animate={inView ? { opacity: 1, y: 0 } : {}}
-                                transition={{ duration: 0.6, delay: 0.1 * i }}
-                                whileHover={{
-                                    borderColor: 'rgba(207,181,59,0.4)',
-                                    boxShadow: '0 0 40px rgba(207,181,59,0.12), inset 0 0 40px rgba(207,181,59,0.04)',
-                                    y: -4,
-                                }}
-                            >
-                                {/* Corner accent */}
-                                <div
-                                    className="absolute top-0 right-0 w-16 h-16 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                                    style={{
-                                        background: 'linear-gradient(225deg, rgba(207,181,59,0.15), transparent)',
-                                    }}
-                                />
+                <motion.div
+                    className="max-w-4xl mx-auto mb-16 p-8 relative overflow-hidden"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={inView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 0.8 }}
+                    style={{ background: 'rgba(207,181,59,0.03)', border: '1px solid rgba(207,181,59,0.1)' }}
+                >
+                    <div className="absolute top-0 left-0 w-2 h-full bg-gold-racing" />
+                    <p className="text-lg md:text-xl font-medium text-[#e0e0e0] leading-relaxed italic">
+                        "Após a desmontagem completa do motor, cada componente é rigorosamente medido e conferido com exatidão máxima para garantir o padrão Blessed."
+                    </p>
+                </motion.div>
 
-                                <div className="flex items-start gap-6">
-                                    {/* Icon box */}
-                                    <div
-                                        className="flex-shrink-0 w-14 h-14 flex items-center justify-center transition-all duration-500 bg-linear-to-br from-gold-racing/15 to-[#9A8420]/10 border border-gold-racing/20"
-                                    >
-                                        <Icon
-                                            size={26}
-                                            className="transition-all duration-300 group-hover:scale-110 text-gold-racing"
-                                        />
-                                    </div>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    {/* Block Services */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        animate={inView ? { opacity: 1, x: 0 } : {}}
+                        transition={{ duration: 0.7, delay: 0.2 }}
+                        className="space-y-8"
+                    >
+                        <div className="flex items-center gap-4 border-b border-white/5 pb-4">
+                            <div className="w-12 h-12 flex items-center justify-center bg-gold-racing/10 border border-gold-racing/30">
+                                <Wrench size={24} className="text-gold-racing" />
+                            </div>
+                            <h3 className="text-2xl font-black uppercase font-heading text-white tracking-widest">
+                                Serviços no Bloco
+                            </h3>
+                        </div>
+                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            {blockServices.map((service, i) => (
+                                <li key={i} className="flex items-center gap-3 text-[#9b9b9b] hover:text-white transition-colors group">
+                                    <ChevronRight size={14} className="text-gold-racing group-hover:translate-x-1 transition-transform" />
+                                    <span className="text-sm font-medium uppercase tracking-tight">{service}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </motion.div>
 
-                                    <div className="flex-1">
-                                        <div className="flex items-center gap-3 mb-2">
-                                            <h3
-                                                className="text-xl font-bold uppercase tracking-wide font-heading text-[#e0e0e0]"
-                                            >
-                                                {s.title}
-                                            </h3>
-                                        </div>
-                                        <p className="text-sm leading-relaxed mb-4 text-[#9b9b9b]">
-                                            {s.description}
-                                        </p>
-                                        <span
-                                            className="text-xs font-semibold tracking-widest uppercase px-3 py-1 bg-gold-racing/10 text-gold-racing border-l-2 border-gold-racing"
-                                        >
-                                            {s.highlight}
-                                        </span>
-                                    </div>
-                                </div>
-                            </motion.div>
-                        )
-                    })}
+                    {/* Head Services */}
+                    <motion.div
+                        initial={{ opacity: 0, x: 30 }}
+                        animate={inView ? { opacity: 1, x: 0 } : {}}
+                        transition={{ duration: 0.7, delay: 0.3 }}
+                        className="space-y-8"
+                    >
+                        <div className="flex items-center gap-4 border-b border-white/5 pb-4 text-right lg:flex-row-reverse lg:text-left">
+                            <div className="w-12 h-12 flex items-center justify-center bg-gold-racing/10 border border-gold-racing/30">
+                                <CheckCircle2 size={24} className="text-gold-racing" />
+                            </div>
+                            <h3 className="text-2xl font-black uppercase font-heading text-white tracking-widest">
+                                Serviços no Cabeçote
+                            </h3>
+                        </div>
+                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            {headServices.map((service, i) => (
+                                <li key={i} className="flex items-center gap-3 text-[#9b9b9b] hover:text-white transition-colors group">
+                                    <ChevronRight size={14} className="text-gold-racing group-hover:translate-x-1 transition-transform" />
+                                    <span className="text-sm font-medium uppercase tracking-tight">{service}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </motion.div>
                 </div>
+
+                {/* Footer statement */}
+                <motion.div
+                    className="mt-20 text-center"
+                    initial={{ opacity: 0 }}
+                    animate={inView ? { opacity: 1 } : {}}
+                    transition={{ duration: 0.8, delay: 0.5 }}
+                >
+                    <div className="inline-block px-10 py-5 border border-gold-racing/20 bg-linear-to-b from-transparent to-gold-racing/5">
+                        <span className="text-lg md:text-xl font-bold uppercase tracking-[0.2em] font-heading text-gold-racing">
+                            Recuperações, Usinagem e Retífica em Geral
+                        </span>
+                    </div>
+                </motion.div>
             </div>
 
             {/* Bottom decorative border */}

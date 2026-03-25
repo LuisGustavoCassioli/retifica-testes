@@ -1,4 +1,4 @@
-import { Instagram, Facebook, Youtube } from 'lucide-react'
+import { Instagram, Facebook, Mail } from 'lucide-react'
 
 const quickLinks = [
     { href: '#servicos', label: 'Serviços' },
@@ -39,7 +39,7 @@ export default function Footer() {
                             {[
                                 { icon: Instagram, href: '#', label: 'Instagram' },
                                 { icon: Facebook, href: '#', label: 'Facebook' },
-                                { icon: Youtube, href: '#', label: 'Youtube' },
+                                { icon: Mail, href: 'mailto:blessedretifica@gmail.com', label: 'Gmail' },
                             ].map(({ icon: Icon, href, label }, i) => (
                                 <a
                                     key={i}
@@ -89,6 +89,8 @@ export default function Footer() {
                         <div className="space-y-3 text-sm" style={{ color: '#9b9b9b' }}>
                             <p><a href='https://maps.app.goo.gl/UBouxczrVWGdDNG69' target="_blank" rel="noopener noreferrer">📍 Rua Pinoguaçu, 191 <br /><span className="ml-6">Vila Lar Nacional, São Paulo – SP</span></a></p>
                             <p>💬 WhatsApp:<a href='https://wa.me/message/JSRGDYDZBLGGI1' target="_blank" rel="noopener noreferrer">(11) 99637-3477</a> / <a href='https://wa.me/5511985596077' target="_blank" rel="noopener noreferrer">(11) 98559-6077</a></p>
+                            <p>✉️ <a href="mailto:blessedretifica@gmail.com">blessedretifica@gmail.com</a></p>
+                            <p>✉️ <a href="mailto:retificablessed2019@gmail.com">retificablessed2019@gmail.com</a></p>
                             <p>🕐 Seg–Sex: 07:30–18:00 | Sáb: 07:30–12:00</p>
                         </div>
                     </div>

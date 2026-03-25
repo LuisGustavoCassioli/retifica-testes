@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { Wrench, CheckCircle2, ChevronRight, Tooltip, Layers, Settings, Microscope, Droplets } from 'lucide-react'
+import { Wrench, CheckCircle2, Layers, Settings, Microscope, Droplets, Activity } from 'lucide-react'
 
 const remanufacturedParts = [
     {

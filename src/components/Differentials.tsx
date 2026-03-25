@@ -11,7 +11,7 @@ const items = [
     {
         icon: Cpu,
         title: 'Equipamentos Modernos',
-        description: 'Usinagem CNC, análise digital e diagnóstico computadorizado. Tecnologia atual, resultados superiores.',
+        description: 'Metrologia com equipamentos de qualidade súbitos micrômetros paquímetros precisos.',
     },
     {
         icon: Star,

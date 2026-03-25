@@ -95,7 +95,7 @@ export default function About() {
                         <p className="text-base leading-relaxed mb-5" style={{ color: '#9b9b9b' }}>
                             A <span style={{ color: '#e0e0e0', fontWeight: 700 }}>Blessed Retífica</span> nasceu da
                             paixão por motores e da obsessão por precisão. Somos referência regional em reconstrução
-                            de motores, combinando décadas de experiência com tecnologia de última geração.
+                            de motores, combinando anos de experiência com tecnologia de última geração.
                         </p>
 
                         <p className="text-base leading-relaxed mb-8" style={{ color: '#9b9b9b' }}>
@@ -106,7 +106,7 @@ export default function About() {
                         {/* KPI list */}
                         <div className="space-y-3 mb-10">
                             {[
-                                'Equipamentos CNC de última geração',
+                                'Metrologia com equipamentos de qualidade (Súbitos, Micrômetros, Paquímetros)',
                                 'Técnicos certificados com especialização contínua',
                                 'Peças com procedência e garantia documentada',
                                 'Prazo respeitado. Qualidade sem concessões.',

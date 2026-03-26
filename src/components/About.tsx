@@ -93,14 +93,11 @@ export default function About() {
                         </h2>
 
                         <p className="text-base leading-relaxed mb-5" style={{ color: '#9b9b9b' }}>
-                            A <span style={{ color: '#e0e0e0', fontWeight: 700 }}>Blessed Retífica</span> nasceu da
-                            paixão por motores e da obsessão por precisão. Somos referência regional em reconstrução
-                            de motores, combinando anos de experiência com tecnologia de última geração.
+                            A <span style={{ color: '#e0e0e0', fontWeight: 700 }}>Blessed Retífica</span> é referência em **Retífica de Motores em São Paulo**, unindo a tradição de quem entende de mecânica profunda com o rigor da **Engenharia de Precisão**. Com mais de 8 anos de atuação, transformamos blocos brutos em máquinas de alta performance.
                         </p>
 
                         <p className="text-base leading-relaxed mb-8" style={{ color: '#9b9b9b' }}>
-                            Cada motor que passa por nossas mãos é tratado como uma obra de engenharia.
-                            Nosso compromisso: entregar potência máxima com durabilidade absoluta.
+                            Nossa oficina é equipada para atender desde veículos nacionais leves até motores importados de alta cilindrada. Cada projeto de **Usinagem de Motor** é executado sob tolerâncias nominais de fábrica, garantindo durabilidade absoluta e potência restaurada.
                         </p>
 
                         {/* KPI list */}

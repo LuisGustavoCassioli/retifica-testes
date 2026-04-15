@@ -102,9 +102,15 @@ export default function Footer() {
                 >
                     <span>© {new Date().getFullYear()} Blessed Retífica de Motores. Todos os direitos reservados.</span>
                     <span>
-                        Desenvolvido com{' '}
-                        <span className="text-gold-racing">♥</span>
-                        {' '}e precisão
+                        Desenvolvido por{' '}
+                        <a
+                            href="https://portfolio-luisgustavocassiolidev.vercel.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gold-racing hover:underline transition-all font-bold"
+                        >
+                            Luis Gustavo Cassioli
+                        </a>
                     </span>
                 </div>
             </div>

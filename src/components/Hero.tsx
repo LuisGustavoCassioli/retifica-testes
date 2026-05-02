@@ -143,7 +143,7 @@ export default function Hero() {
                 >
                     {[
                         { value: '+800', label: 'Motores Reconstruídos' },
-                        { value: '8', label: 'Anos de Experiência' },
+                        { value: '3 CIL', label: 'Especialistas em 3 Cilindros' },
                         { value: '100%', label: 'Garantia de Qualidade' },
                     ].map((stat) => (
                         <div key={stat.label} className="text-center">

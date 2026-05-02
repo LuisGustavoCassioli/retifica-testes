@@ -2,7 +2,9 @@ import { useState, useEffect } from 'react'
 import Loader from './components/Loader'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import Brands from './components/Brands'
 import Services from './components/Services'
+import WhyRebuild from './components/WhyRebuild'
 import About from './components/About'
 import Differentials from './components/Differentials'
 import Gallery from './components/Gallery'
@@ -24,7 +26,9 @@ export default function App() {
     <div className="bg-black-deep text-white overflow-x-hidden">
       <Navbar />
       <Hero />
+      <Brands />
       <Services />
+      <WhyRebuild />
       <About />
       <Differentials />
       <Gallery />

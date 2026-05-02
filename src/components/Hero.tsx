@@ -136,7 +136,7 @@ export default function Hero() {
 
                 {/* Stats row */}
                 <motion.div
-                    className="flex items-center justify-center gap-12 mt-16"
+                    className="flex items-center justify-center gap-12 mt-12"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.8 }}
@@ -162,12 +162,11 @@ export default function Hero() {
 
             {/* Scroll indicator */}
             <motion.div
-                className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2"
+                className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10"
                 animate={{ y: [0, 8, 0] }}
                 transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
             >
-                <span className="text-xs tracking-widest uppercase text-[#9b9b9b]">Scroll</span>
-                <ChevronDown size={20} className="text-gold-racing" />
+                <ChevronDown size={24} className="text-gold-racing opacity-50" />
             </motion.div>
         </section>
     )

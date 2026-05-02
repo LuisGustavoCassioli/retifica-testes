@@ -179,10 +179,9 @@ export default function Services() {
                             </h3>
                             <ul className="space-y-2">
                                 {laborWorkflow.map((item, i) => (
-                                    <li key={i} className="flex items-center justify-between text-[10px] uppercase tracking-widest text-[#9b9b9b]">
+                                    <li key={i} className="flex items-center text-[10px] uppercase tracking-widest text-[#9b9b9b]">
+                                        <CheckCircle2 size={12} className="text-gold-racing/60 mr-2" />
                                         <span>{item}</span>
-                                        <div className="h-px flex-1 mx-3 bg-white/5" />
-                                        <span className="text-gold-racing font-bold">STND</span>
                                     </li>
                                 ))}
                             </ul>

@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion'
 
 const brands = [
     'Chevrolet', 'Fiat', 'Volkswagen', 'Ford', 'Renault', 'Peugeot', 'Citroën', 'Toyota', 'Honda', 'Hyundai'

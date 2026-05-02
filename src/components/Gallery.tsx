@@ -1,6 +1,6 @@
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { ZoomIn, MessageCircle } from 'lucide-react'
+import { MessageCircle } from 'lucide-react'
 
 // Gallery uses placeholder engine-related images from Unsplash (no API needed)
 const galleryItems = [
@@ -14,7 +14,6 @@ const galleryItems = [
 export default function Gallery() {
     const ref = useRef(null)
     const inView = useInView(ref, { once: true, margin: '-100px' })
-    const [hovered, setHovered] = useState<number | null>(null)
 
     return (
         <section
@@ -54,40 +53,20 @@ export default function Gallery() {
                     {galleryItems.map((item, i) => (
                         <motion.div
                             key={item.id}
-                            className="group relative overflow-hidden cursor-pointer"
+                            className="relative overflow-hidden"
                             style={{ aspectRatio: '4/3' }}
                             initial={{ opacity: 0, scale: 0.95 }}
                             animate={inView ? { opacity: 1, scale: 1 } : {}}
                             transition={{ duration: 0.6, delay: i * 0.08 }}
-                            onMouseEnter={() => setHovered(item.id)}
-                            onMouseLeave={() => setHovered(null)}
                         >
                             <img
                                 src={item.src}
                                 alt={item.label}
-                                className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
-                                style={{ filter: 'brightness(0.6) saturate(0.7)' }}
+                                className="w-full h-full object-cover"
+                                style={{ filter: 'brightness(0.9)' }}
                                 loading="lazy"
                                 width="400"
                                 height="300"
-                            />
-
-                            <motion.div
-                                className="absolute inset-0 flex flex-col items-center justify-center bg-linear-to-t from-gold-racing/60 to-black/30"
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: hovered === item.id ? 1 : 0 }}
-                                transition={{ duration: 0.3 }}
-                            >
-                                <ZoomIn size={32} color="white" className="mb-3 opacity-90" />
-                                <span
-                                    className="text-sm font-bold tracking-widest uppercase text-white font-heading"
-                                >
-                                    {item.label}
-                                </span>
-                            </motion.div>
-
-                            <div
-                                className={`absolute bottom-0 left-0 right-0 h-0.5 transition-all duration-300 ${hovered === item.id ? 'bg-gold-racing' : 'bg-transparent'}`}
                             />
                         </motion.div>
                     ))}

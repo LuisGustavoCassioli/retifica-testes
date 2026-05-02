@@ -4,11 +4,11 @@ import { ZoomIn, MessageCircle } from 'lucide-react'
 
 // Gallery uses placeholder engine-related images from Unsplash (no API needed)
 const galleryItems = [
-    { id: 1, src: '/galeria-1.jpg', label: 'Retífica de Cilindros' },
-    { id: 2, src: '/galeria-2.jpg', label: 'Medição de Precisão' },
-    { id: 3, src: '/galeria-3.jpg', label: 'Montagem Técnica' },
+    { id: 1, src: 'https://www.hojemais.com.br/imagem/noticia/1000/1000/1591194190_93438.jpg', label: 'Retífica de Cilindros' },
+    { id: 2, src: '/galeria-1.jpg', label: 'Medição de Precisão' },
+    { id: 3, src: '/galeria-2.jpg', label: 'Montagem Técnica' },
     { id: 4, src: 'https://goosites.com.br/reticar/imgs_dicas/c4aa0-usinagem-cabecote-01.jpg', label: 'Usinagem de Cabeçote' },
-    { id: 5, src: 'https://monobloco.net.br/wp-content/uploads/2024/03/desvendando-os-misterios-o-diagnostico-eletronico-nos-automoveis-modernos.jpg', label: 'Diagnóstico Eletrônico' },
+    { id: 5, src: '/galeria-3.jpg', label: 'Diagnóstico Eletrônico' },
 ]
 
 export default function Gallery() {

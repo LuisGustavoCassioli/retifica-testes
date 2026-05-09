@@ -11,6 +11,7 @@ import Gallery from './components/Gallery'
 import Testimonials from './components/Testimonials'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import WhatsAppButton from './components/WhatsAppButton'
 
 export default function App() {
   const [loading, setLoading] = useState(true)
@@ -35,6 +36,7 @@ export default function App() {
       <Testimonials />
       <Contact />
       <Footer />
+      <WhatsAppButton />
     </div>
   )
 }

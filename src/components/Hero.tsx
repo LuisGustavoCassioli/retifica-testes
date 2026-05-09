@@ -76,7 +76,7 @@ export default function Hero() {
 
                 {/* Main headline */}
                 <motion.h1
-                    className="text-5xl md:text-7xl xl:text-8xl font-black uppercase leading-none mb-6 font-heading tracking-wider"
+                    className="text-4xl sm:text-6xl md:text-7xl xl:text-8xl font-black uppercase leading-[0.9] mb-6 font-heading tracking-wider"
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
@@ -90,7 +90,7 @@ export default function Hero() {
 
                 {/* Subtitle */}
                 <motion.p
-                    className="text-base md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
+                    className="text-sm md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
                     style={{ color: '#9b9b9b', fontWeight: 400 }}
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -109,7 +109,7 @@ export default function Hero() {
                 >
                     <a
                         href="#contato"
-                        className="group relative px-8 py-4 font-bold text-sm tracking-widest uppercase transition-all duration-300 hover:scale-105 overflow-hidden bg-linear-to-br from-gold-racing to-[#9A8420] text-[#111111] shadow-[0_0_30px_rgba(207,181,59,0.4)]"
+                        className="w-full sm:w-auto group relative px-8 py-4 font-bold text-sm tracking-widest uppercase transition-all duration-300 hover:scale-105 overflow-hidden bg-linear-to-br from-gold-racing to-[#9A8420] text-[#111111] shadow-[0_0_30px_rgba(207,181,59,0.4)]"
                         style={{
                             clipPath: 'polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%)',
                         }}
@@ -122,7 +122,7 @@ export default function Hero() {
 
                     <a
                         href="#servicos"
-                        className="group px-8 py-4 font-bold text-sm tracking-widest uppercase transition-all duration-300 hover:scale-105 border border-gold-racing/50 text-[#e0e0e0] relative overflow-hidden"
+                        className="w-full sm:w-auto group px-8 py-4 font-bold text-sm tracking-widest uppercase transition-all duration-300 hover:scale-105 border border-gold-racing/50 text-[#e0e0e0] relative overflow-hidden"
                         style={{
                             clipPath: 'polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%)',
                         }}
@@ -136,7 +136,7 @@ export default function Hero() {
 
                 {/* Stats row */}
                 <motion.div
-                    className="flex items-center justify-center gap-12 mt-12"
+                    className="grid grid-cols-2 sm:grid-cols-3 gap-8 sm:gap-12 mt-12 px-4"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.8 }}
@@ -144,15 +144,15 @@ export default function Hero() {
                     {[
                         { value: '+800', label: 'Motores Reconstruídos' },
                         { value: '3 CIL', label: 'Especialistas em 3 Cilindros' },
-                        { value: '100%', label: 'Garantia de Qualidade' },
+                        { value: '100%', label: 'Garantia de Qualidade', className: 'col-span-2 sm:col-span-1' },
                     ].map((stat) => (
-                        <div key={stat.label} className="text-center">
+                        <div key={stat.label} className={`text-center ${stat.className || ''}`}>
                             <div
-                                className="text-3xl md:text-4xl font-black font-heading text-gold-racing"
+                                className="text-2xl sm:text-3xl md:text-4xl font-black font-heading text-gold-racing"
                             >
                                 {stat.value}
                             </div>
-                            <div className="text-xs tracking-widest uppercase mt-1 text-[#9b9b9b]">
+                            <div className="text-[10px] sm:text-xs tracking-widest uppercase mt-1 text-[#9b9b9b]">
                                 {stat.label}
                             </div>
                         </div>

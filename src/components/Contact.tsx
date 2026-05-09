@@ -210,6 +210,7 @@ export default function Contact() {
                             <div className="space-y-1">
                                 {[
                                     ['Seg – Sex', '08:00 – 18:00'],
+                                    ['Sábado', '08:00 – 12:00'],
                                 ].map(([day, hours]) => (
                                     <div key={day} className="flex justify-between text-sm">
                                         <span style={{ color: '#9b9b9b' }}>{day}</span>

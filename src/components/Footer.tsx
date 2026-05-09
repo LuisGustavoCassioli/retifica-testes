@@ -91,7 +91,7 @@ export default function Footer() {
                             <p>💬 WhatsApp:<a href='https://wa.me/message/JSRGDYDZBLGGI1' target="_blank" rel="noopener noreferrer">(11) 99637-3477</a> / <a href='https://wa.me/5511985596077' target="_blank" rel="noopener noreferrer">(11) 98559-6077</a></p>
                             <p className="flex items-center gap-2">✉️ <a href="mailto:blessedretifica@gmail.com" className="hover:text-gold-racing transition-colors">blessedretifica@gmail.com</a></p>
                             <p className="flex items-center gap-2">✉️ <a href="mailto:retificablessed2019@gmail.com" className="hover:text-gold-racing transition-colors">retificablessed2019@gmail.com</a></p>
-                            <p>🕐 Seg–Sex: 08:00–18:00</p>
+                            <p>🕐 Seg–Sex: 08:00–18:00 | Sáb: 08:00–12:00</p>
                         </div>
                     </div>
                 </div>

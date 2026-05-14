@@ -105,6 +105,7 @@ export default function About() {
                             {[
                                 'Metrologia com equipamentos de qualidade (Súbitos, Micrômetros, Paquímetros)',
                                 'Técnicos certificados com especialização contínua',
+                                'Venda de Cabeçotes à Base de Troca com pronta entrega',
                                 'Peças com procedência e garantia documentada',
                                 'Prazo respeitado. Qualidade sem concessões.',
                             ].map((item, i) => (

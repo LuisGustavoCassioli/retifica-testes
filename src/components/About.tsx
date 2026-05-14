@@ -37,12 +37,12 @@ export default function About() {
 
                         <motion.div className="relative z-10 overflow-hidden" style={{ y: imgY }}>
                             <img
-                                src="/workshop.png"
+                                src="/workshop.jpg"
                                 alt="Oficina Blessed Retífica"
-                                className="w-full h-80 lg:h-[460px] object-cover"
+                                className="w-full h-80 lg:h-[460px] object-cover object-center shadow-2xl"
                                 style={{ filter: 'brightness(0.85)' }}
-                                width="800"
-                                height="460"
+                                width="1024"
+                                height="806"
                             />
                             {/* Red tint overlay */}
                             <div
@@ -93,11 +93,11 @@ export default function About() {
                         </h2>
 
                         <p className="text-base leading-relaxed mb-5" style={{ color: '#9b9b9b' }}>
-                            A <span style={{ color: '#e0e0e0', fontWeight: 700 }}>Blessed Retífica</span> é referência em **Retífica de Motores em São Paulo**, unindo a tradição de quem entende de mecânica profunda com o rigor da **Engenharia de Precisão**. Com mais de 8 anos de atuação, transformamos blocos brutos em máquinas de alta performance.
+                            A <span style={{ color: '#e0e0e0', fontWeight: 700 }}>Blessed Retífica</span> é referência em Retífica de Motores em São Paulo, unindo a tradição de quem entende de mecânica profunda com o rigor da Engenharia de Precisão. Com mais de 8 anos de atuação, transformamos blocos brutos em máquinas de alta performance.
                         </p>
 
                         <p className="text-base leading-relaxed mb-8" style={{ color: '#9b9b9b' }}>
-                            Nossa oficina é equipada para atender desde veículos nacionais leves até motores importados de alta cilindrada. Cada projeto de **Usinagem de Motor** é executado sob tolerâncias nominais de fábrica, garantindo durabilidade absoluta e potência restaurada.
+                            Nossa oficina é equipada para atender desde veículos nacionais leves até motores importados de alta cilindrada. Cada projeto de Usinagem de Motor é executado sob tolerâncias nominais de fábrica, garantindo durabilidade absoluta e potência restaurada.
                         </p>
 
                         {/* KPI list */}

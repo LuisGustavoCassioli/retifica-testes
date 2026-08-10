@@ -2,26 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://blessedmotores.com.br/</loc>
+    <loc>https://retifica-testes.vercel.app/</loc>
     <lastmod>2026-08-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://blessedmotores.com.br/hero-engine.png</image:loc>
+      <image:loc>https://retifica-testes.vercel.app/hero-engine.png</image:loc>
       <image:title>Blessed Retífica de Motores - Potência Reconstruída</image:title>
       <image:caption>Motor reconstruído com metrologia de precisão e garantia total em São Paulo</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://blessedmotores.com.br/workshop.jpg</image:loc>
+      <image:loc>https://retifica-testes.vercel.app/workshop.jpg</image:loc>
       <image:title>Oficina Blessed Retífica de Motores</image:title>
       <image:caption>Usinagem e reconstrução de motores nacionais e importados</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://blessedmotores.com.br/usinagem-cabecote.jpg</image:loc>
+      <image:loc>https://retifica-testes.vercel.app/usinagem-cabecote.jpg</image:loc>
       <image:title>Usinagem de Cabeçotes de Precisão</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://blessedmotores.com.br/retifica-cilindros.jpg</image:loc>
+      <image:loc>https://retifica-testes.vercel.app/retifica-cilindros.jpg</image:loc>
       <image:title>Retífica de Cilindros e Blocos de Motor</image:title>
     </image:image>
   </url>

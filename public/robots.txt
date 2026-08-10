@@ -19,4 +19,4 @@ User-agent: Google-Extended
 Allow: /
 
 # Sitemap Location
-Sitemap: https://blessedmotores.com.br/sitemap.xml
+Sitemap: https://retifica-testes.vercel.app/sitemap.xml

@@ -20,5 +20,5 @@
 - **Endereço**: Rua Pinoguaçu, 191 - Vila Lar Nacional, São Paulo – SP, CEP 03890-000, Brasil
 - **Telefone / WhatsApp**: +55 (11) 99637-3477 / +55 (11) 98559-6077
 - **E-mails**: blessedretifica@gmail.com | retificablessed2019@gmail.com
-- **Website Oficial**: https://blessedmotores.com.br/
+- **Website Oficial**: https://retifica-testes.vercel.app/
 - **Horário de Atendimento**: Segunda a Sexta das 08h00 às 18h00 | Sábados das 08h00 às 12h00

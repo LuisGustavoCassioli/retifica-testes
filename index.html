@@ -4,36 +4,90 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+
   <!-- Content Security Policy -->
   <meta http-equiv="Content-Security-Policy" 
-    content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com https://www.hojemais.com.br https://omecanico.com.br https://blogdafpt.com.br https://goosites.com.br https://monobloco.net.br; connect-src 'self'; frame-src 'self'; upgrade-insecure-requests;">
+    content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.clarity.ms https://*.clarity.ms; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com https://www.googletagmanager.com https://c.bing.com https://*.clarity.ms; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://*.clarity.ms https://c.bing.com; frame-src 'self'; upgrade-insecure-requests;">
 
-  <!-- SEO -->
-  <title>Blessed Retífica de Motores | Especialista em Reconstrução de Motores</title>
+  <!-- SEO Primário -->
+  <title>Blessed Retífica de Motores | Reconstrução de Motores & Usinagem de Precisão em SP</title>
   <meta name="description"
-    content="Referência em retífica de motores nacionais e importados. Usinagem técnica, metrologia de precisão (súbitos e micrômetros) e garantia documentada. Atendimento em São Paulo." />
+    content="Oficina especializada em retífica de motores nacionais e importados em São Paulo. Usinagem técnica de bloco, cabeçote, virabrequim e bielas. Metrologia industrial com súbitos e micrômetros, garantia documentada e atendimento especializado em motores 3 cilindros." />
   <meta name="keywords"
-    content="retífica de motores, retífica de motores sp, motor retificado, oficina de motores, usinagem de cabeçote, bloco de motor, biela retificada, virabrequim, blessed retífica, reconstrução de motor" />
+    content="retífica de motores, retífica de motores sp, retífica zona leste sp, usinagem de bloco, retífica de cabeçote, virabrequim, bielas retificadas, motor 3 cilindros, reconstrução de motor, oficina mecânica são paulo, blessed retífica" />
+  <meta name="author" content="Blessed Retífica de Motores" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <link rel="canonical" href="https://blessedmotores.com.br/" />
-  <meta name="robots" content="index, follow" />
 
-  <!-- Structured Data (JSON-LD) -->
+  <!-- Metatags Geográficas / Local SEO -->
+  <meta name="geo.region" content="BR-SP" />
+  <meta name="geo.placename" content="São Paulo" />
+  <meta name="geo.position" content="-23.5505;-46.6333" />
+  <meta name="ICBM" content="-23.5505, -46.6333" />
+
+  <!-- Mobile & Web App Theme -->
+  <meta name="theme-color" content="#050505" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/favicon.svg" />
+
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:site_name" content="Blessed Retífica de Motores" />
+  <meta property="og:title" content="Blessed Retífica de Motores | Potência Reconstruída & Precisão Absoluta" />
+  <meta property="og:description"
+    content="Engenharia de precisão em retífica de motores. Mais de 800 motores reconstruídos com tolerância em micrômetros e garantia total em São Paulo." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://blessedmotores.com.br/" />
+  <meta property="og:image" content="https://blessedmotores.com.br/hero-engine.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Motor reconstruído de alta performance - Blessed Retífica" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Blessed Retífica de Motores | Reconstrução de Motores em SP" />
+  <meta name="twitter:description"
+    content="Usinagem técnica de bloco, cabeçote, virabrequim e bielas. Metrologia de precisão com garantia documentada." />
+  <meta name="twitter:image" content="https://blessedmotores.com.br/hero-engine.png" />
+
+  <!-- Google Search Console Validation Tag -->
+  <!-- SUBSTITUA O VALOR ABAIXO PELO SEU CÓDIGO DO GOOGLE SEARCH CONSOLE -->
+  <meta name="google-site-verification" content="YOUR_GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE" />
+
+  <!-- Preload da Imagem Principal do Hero -->
+  <link rel="preload" as="image" href="/hero-engine.png" fetchpriority="high" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Structured Data (JSON-LD) - Schema.org AutoRepair & LocalBusiness -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
+      "@type": "AutoRepair",
       "name": "Blessed Retífica de Motores",
       "image": "https://blessedmotores.com.br/hero-engine.png",
-      "@id": "https://blessedmotores.com.br",
+      "@id": "https://blessedmotores.com.br/#organization",
       "url": "https://blessedmotores.com.br",
-      "telephone": "+5511945028521",
+      "telephone": "+5511996373477",
+      "email": "blessedretifica@gmail.com",
+      "priceRange": "$$",
+      "description": "Especialista em retífica e reconstrução de motores nacionais e importados, usinagem de bloco, cabeçote, virabrequim e bielas com metrologia de precisão e garantia documentada em São Paulo.",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Consulte nosso endereço físico",
+        "streetAddress": "Rua Pinoguaçu, 191",
         "addressLocality": "São Paulo",
+        "addressSublocality": "Vila Lar Nacional",
         "addressRegion": "SP",
-        "postalCode": "00000-000",
+        "postalCode": "03890-000",
         "addressCountry": "BR"
       },
       "geo": {
@@ -41,43 +95,91 @@
         "latitude": -23.5505,
         "longitude": -46.6333
       },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday"
-        ],
-        "opens": "08:00",
-        "closes": "18:00"
-      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "08:00",
+          "closes": "12:00"
+        }
+      ],
       "sameAs": [
-        "https://www.instagram.com/blessed_retifica"
-      ]
+        "https://www.instagram.com/blessed_retifica",
+        "https://wa.me/message/JSRGDYDZBLGGI1"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Serviços de Retífica de Motores",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Retífica de Bloco de Motor",
+              "description": "Mandrilhamento, abertura de cilindros, brunimento de precisão e lavagem fina."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Usinagem de Cabeçote",
+              "description": "Plaina de face, assentamento de válvulas e substituição de retentores."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Retífica de Virabrequim e Bielas",
+              "description": "Retífica dos colos de biela e mancal com alinhamento mecânico."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Especialização em Motores 3 Cilindros",
+              "description": "Reconstrução com tolerâncias rigorosas para motores 3 cilindros modernos."
+            }
+          }
+        ]
+      }
     }
   </script>
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Blessed Retífica de Motores | Especialista em Reconstrução de Motores" />
-  <meta property="og:description"
-    content="Precisão industrial e alta performance. Mais de 800 motores reconstruídos com garantia total." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="/hero-engine.png" />
+  <!-- Google Analytics 4 (GA4) -->
+  <!-- SUBSTITUA 'G-XXXXXXXXXX' PELO SEU ID DE MEDIÇÃO DO GOOGLE ANALYTICS -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  <link rel="preload" as="image" href="/hero-engine.png" fetchpriority="high" />
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
 
-  <!-- Favicon placeholder -->
-  <link rel="icon" type="image/svg+xml"
-    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23050505'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Impact' font-size='22' fill='%23CFB53B'%3EB%3C/text%3E%3C/svg%3E" />
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet" />
+  <!-- Microsoft Clarity -->
+  <!-- SUBSTITUA 'YOUR_CLARITY_PROJECT_ID' PELO SEU PROJECT ID DO MICROSOFT CLARITY -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "YOUR_CLARITY_PROJECT_ID");
+  </script>
 </head>
 
 <body>
